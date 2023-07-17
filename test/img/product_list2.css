@@ -1,0 +1,147 @@
+body {
+  background-color: hsla(107, 63%, 63%, 0.113);
+}
+p {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+.care {
+  position: relative;
+  margin-top: 60px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  top: -20px;
+  left: 40px;
+}
+.product1,
+.product2,
+.product3 {
+  width: 150px;
+  height: 190px;
+  margin: 50px;
+  border-radius: 0 90px 0 0;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.product1 {
+  background: url(/img/어바웃미.png) center center/cover;
+}
+.product2 {
+  background: url(/img/엠플엔.jpeg) center center/cover;
+}
+.product3 {
+  background: url(/img/아이소이.jpeg) center center/cover;
+}
+
+.name1,
+.name2,
+.name3 {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align-last: center;
+}
+
+.title1,
+.title2,
+.title3 {
+  font-weight: bold;
+}
+
+.sub-title1,
+.sub-title2,
+.sub-title3 {
+  font-weight: lighter;
+  padding: 10px;
+}
+
+.viewbtn {
+  width: 170px;
+  height: 30px;
+  margin-top: 50px;
+
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #7edc65;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.clicked {
+  color: #7edc65;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1019px) {
+  p {
+    text-align: center;
+  }
+  .list-body {
+    display: flex;
+    background-color: hsla(107, 63%, 63%, 0.113);
+    width: 700px;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    text-align: center;
+  }
+
+  .product1,
+  .product2,
+  .product3 {
+    flex-direction: column;
+    margin-left: 20px;
+    width: 170px;
+    height: 210px;
+  }
+
+  .viewbtn {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  p {
+    text-align: center;
+  }
+  .list-body {
+    display: flex;
+    background-color: hsla(107, 63%, 63%, 0.113);
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    text-align: center;
+  }
+
+  .product1,
+  .product2,
+  .product3 {
+    flex-direction: column;
+    margin-left: 20px;
+    width: 170px;
+    height: 210px;
+  }
+
+  .viewbtn {
+    margin-left: 20px;
+  }
+}
