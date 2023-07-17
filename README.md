@@ -1,1 +1,1 @@
-# Beauty-Recipe
+# Beauty-Lab
