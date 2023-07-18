@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <!-- time-select-page.css link -->
-    <link rel="stylesheet" href="/filter-select1-page.css" />
+    <link rel="stylesheet" href="/filter-select-page.css" />
 
     <!-- HTML link 태그를 활용한 Bootstrap 연동 -->
     <link
@@ -74,6 +74,8 @@
             <button class="category-button">기타</button>
             <button class="category-button">이너뷰티</button>
           </div>
+          <br />
+          <!-- 세부 카테고리 선택 -->
           <div class="select-subcategory-button-container"></div>
         </div>
       </div>
@@ -81,35 +83,35 @@
 
     <script>
       function changeButtonColor(event) {
-        // 클릭된 버튼이 연도 버튼인지 확인합니다
+        // 클릭된 버튼이 연도 버튼인지 확인
         if (event.target.classList.contains("year-button")) {
           var yearButtons = document.querySelectorAll(".year-button");
 
-          // 모든 연도 버튼의 색상과 배경을 초기화합니다
+          // 모든 연도 버튼의 색상과 배경을 초기화
           yearButtons.forEach(function (button) {
             button.style.color = "white";
             button.style.backgroundColor = "lightgray";
             button.style.border = "none";
           });
 
-          // 클릭된 연도 버튼의 스타일을 변경합니다
+          // 클릭된 연도 버튼의 스타일을 변경
           event.target.style.color = "#7edc65";
           event.target.style.backgroundColor = "white";
           event.target.style.border = "solid 2px #7edc65";
         }
 
-        // 클릭된 버튼이 카테고리 버튼인지 확인합니다
+        // 클릭된 버튼이 카테고리 버튼인지 확인
         if (event.target.classList.contains("category-button")) {
           var categoryButtons = document.querySelectorAll(".category-button");
 
-          // 모든 카테고리 버튼의 색상과 배경을 초기화합니다
+          // 모든 카테고리 버튼의 색상과 배경을 초기화
           categoryButtons.forEach(function (button) {
             button.style.color = "white";
             button.style.backgroundColor = "lightgray";
             button.style.border = "none";
           });
 
-          // 클릭된 카테고리 버튼의 스타일을 변경합니다
+          // 클릭된 카테고리 버튼의 스타일을 변경
           event.target.style.color = "#7edc65";
           event.target.style.backgroundColor = "white";
           event.target.style.border = "solid 2px #7edc65";
@@ -119,10 +121,10 @@
           );
           subcategoryButtonContainer.innerHTML = "";
 
-          // 새로운 카테고리에 해당하는 추가 버튼을 생성합니다
+          // 새로운 카테고리에 해당하는 추가 버튼을 생성
           if (event.target.textContent === "스킨케어") {
             subcategoryButtonContainer.innerHTML = `
-            <div class="subcategory"><h4>세부 카테고리</h4></div>
+              <div class="subcategory"><h4>세부 카테고리</h4></div>
               <button class="subcategory-button">스킨/토너</button>
               <button class="subcategory-button">로션/에멀젼</button>
               <button class="subcategory-button">앰플/세럼</button>
@@ -134,29 +136,56 @@
             `;
           } else if (event.target.textContent === "클렌징/필링") {
             subcategoryButtonContainer.innerHTML = `
-            <div class="subcategory"><h4>세부 카테고리</h4></div>
-            <button class="subcategory-button">클렌징 폼</button>
-            <button class="subcategory-button">클렌징 워터</button>
-            <button class="subcategory-button">클렌징 젤</button>
-            <button class="subcategory-button">클렌징 오일</button>
-            <button class="subcategory-button">클렌징 로션/크림</button>
-            <button class="subcategory-button">클렌징 비누</button>
-            <button class="subcategory-button">클렌징 티슈</button>
-            <button class="subcategory-button">립/아이 리무버</button>
-            <button class="subcategory-button">스크럽/필링</button>
+              <div class="subcategory"><h4>세부 카테고리</h4></div>
+              <button class="subcategory-button">클렌징 폼</button>
+              <button class="subcategory-button">클렌징 워터</button>
+              <button class="subcategory-button">클렌징 젤</button>
+              <button class="subcategory-button">클렌징 오일</button>
+              <button class="subcategory-button">클렌징 로션/크림</button>
+              <button class="subcategory-button">클렌징 비누</button>
+              <button class="subcategory-button">클렌징 티슈</button>
+              <button class="subcategory-button">립/아이 리무버</button>
+              <button class="subcategory-button">스크럽/필링</button>
             `;
           }
-          // ... 나머지 카테고리에 대한 추가 버튼 생성 로직을 추가하세요
+          // ... 나머지 카테고리에 대한 추가 버튼 생성 로직 추가
+
+          // 서브 카테고리 버튼에 이벤트 리스너를 추가
+          var subcategoryButtons = document.querySelectorAll(
+            ".subcategory-button"
+          );
+          subcategoryButtons.forEach(function (button) {
+            button.addEventListener("click", changeButtonColor);
+          });
+        }
+
+        // 클릭된 버튼이 서브 카테고리 버튼인지 확인
+        if (event.target.classList.contains("subcategory-button")) {
+          var subcategoryButtons = document.querySelectorAll(
+            ".subcategory-button"
+          );
+
+          // 모든 서브 카테고리 버튼의 색상과 배경을 초기화
+          subcategoryButtons.forEach(function (button) {
+            button.style.color = "white";
+            button.style.backgroundColor = "lightgray";
+            button.style.border = "none";
+          });
+
+          // 클릭된 서브 카테고리 버튼의 스타일을 변경
+          event.target.style.color = "#7edc65";
+          event.target.style.backgroundColor = "white";
+          event.target.style.border = "solid 2px #7edc65";
         }
       }
 
-      // 연도 버튼에 이벤트 리스너를 추가합니다
+      // 연도 버튼에 이벤트 리스너를 추가
       var yearButtons = document.querySelectorAll(".year-button");
       yearButtons.forEach(function (button) {
         button.addEventListener("click", changeButtonColor);
       });
 
-      // 카테고리 버튼에 이벤트 리스너를 추가합니다
+      // 카테고리 버튼에 이벤트 리스너를 추가
       var categoryButtons = document.querySelectorAll(".category-button");
       categoryButtons.forEach(function (button) {
         button.addEventListener("click", changeButtonColor);
