@@ -50,32 +50,117 @@
         <div class="filter-select-box">
           <br />
           <!-- 연도 선택 -->
-          <div class="year"><h4>연도</h4></div>
           <div class="select-year-button-container">
-            <button class="select-year-button" value="2021">2021</button>
-            <button class="select-year-button" value="2022">2022</button>
-            <button class="select-year-button" value="2023">2023</button>
+            <div class="year"><h4>연도</h4></div>
+            <button class="year-button" value="2021">2021</button>
+            <button class="year-button" value="2022">2022</button>
+            <button class="year-button" value="2023">2023</button>
           </div>
           <br />
           <!-- 제품 카테고리 선택 -->
-          <div class="product"><h4>카테고리</h4></div>
-          <div class="select-product-button-container">
-            <button class="select-product-button">스킨케어</button>
-            <button class="select-product-button">클렌징/필링</button>
-            <button class="select-product-button">마스크/팩</button>
-            <button class="select-product-button">선케어</button>
-            <button class="select-product-button">베이스</button>
-            <button class="select-product-button">아이</button>
-            <button class="select-product-button">립</button>
-            <button class="select-product-button">바디</button>
-            <button class="select-product-button">헤어</button>
-            <button class="select-product-button">네일</button>
-            <button class="select-product-button">향수</button>
-            <button class="select-product-button">기타</button>
-            <button class="select-product-button">이너뷰티</button>
+          <div class="select-category-button-container">
+            <div class="category"><h4>카테고리</h4></div>
+            <button class="category-button">스킨케어</button>
+            <button class="category-button">클렌징/필링</button>
+            <button class="category-button">마스크/팩</button>
+            <button class="category-button">선케어</button>
+            <button class="category-button">베이스</button>
+            <button class="category-button">아이</button>
+            <button class="category-button">립</button>
+            <button class="category-button">바디</button>
+            <button class="category-button">헤어</button>
+            <button class="category-button">네일</button>
+            <button class="category-button">향수</button>
+            <button class="category-button">기타</button>
+            <button class="category-button">이너뷰티</button>
           </div>
+          <div class="select-subcategory-button-container"></div>
         </div>
       </div>
     </div>
+
+    <script>
+      function changeButtonColor(event) {
+        // 클릭된 버튼이 연도 버튼인지 확인합니다
+        if (event.target.classList.contains("year-button")) {
+          var yearButtons = document.querySelectorAll(".year-button");
+
+          // 모든 연도 버튼의 색상과 배경을 초기화합니다
+          yearButtons.forEach(function (button) {
+            button.style.color = "white";
+            button.style.backgroundColor = "lightgray";
+            button.style.border = "none";
+          });
+
+          // 클릭된 연도 버튼의 스타일을 변경합니다
+          event.target.style.color = "#7edc65";
+          event.target.style.backgroundColor = "white";
+          event.target.style.border = "solid 2px #7edc65";
+        }
+
+        // 클릭된 버튼이 카테고리 버튼인지 확인합니다
+        if (event.target.classList.contains("category-button")) {
+          var categoryButtons = document.querySelectorAll(".category-button");
+
+          // 모든 카테고리 버튼의 색상과 배경을 초기화합니다
+          categoryButtons.forEach(function (button) {
+            button.style.color = "white";
+            button.style.backgroundColor = "lightgray";
+            button.style.border = "none";
+          });
+
+          // 클릭된 카테고리 버튼의 스타일을 변경합니다
+          event.target.style.color = "#7edc65";
+          event.target.style.backgroundColor = "white";
+          event.target.style.border = "solid 2px #7edc65";
+
+          var subcategoryButtonContainer = document.querySelector(
+            ".select-subcategory-button-container"
+          );
+          subcategoryButtonContainer.innerHTML = "";
+
+          // 새로운 카테고리에 해당하는 추가 버튼을 생성합니다
+          if (event.target.textContent === "스킨케어") {
+            subcategoryButtonContainer.innerHTML = `
+            <div class="subcategory"><h4>세부 카테고리</h4></div>
+              <button class="subcategory-button">스킨/토너</button>
+              <button class="subcategory-button">로션/에멀젼</button>
+              <button class="subcategory-button">앰플/세럼</button>
+              <button class="subcategory-button">페이스오일</button>
+              <button class="subcategory-button">크림</button>
+              <button class="subcategory-button">아이케어</button>
+              <button class="subcategory-button">미스트</button>
+              <button class="subcategory-button">젤</button>
+            `;
+          } else if (event.target.textContent === "클렌징/필링") {
+            subcategoryButtonContainer.innerHTML = `
+            <div class="subcategory"><h4>세부 카테고리</h4></div>
+            <button class="subcategory-button">클렌징 폼</button>
+            <button class="subcategory-button">클렌징 워터</button>
+            <button class="subcategory-button">클렌징 젤</button>
+            <button class="subcategory-button">클렌징 오일</button>
+            <button class="subcategory-button">클렌징 로션/크림</button>
+            <button class="subcategory-button">클렌징 비누</button>
+            <button class="subcategory-button">클렌징 티슈</button>
+            <button class="subcategory-button">립/아이 리무버</button>
+            <button class="subcategory-button">스크럽/필링</button>
+            `;
+          }
+          // ... 나머지 카테고리에 대한 추가 버튼 생성 로직을 추가하세요
+        }
+      }
+
+      // 연도 버튼에 이벤트 리스너를 추가합니다
+      var yearButtons = document.querySelectorAll(".year-button");
+      yearButtons.forEach(function (button) {
+        button.addEventListener("click", changeButtonColor);
+      });
+
+      // 카테고리 버튼에 이벤트 리스너를 추가합니다
+      var categoryButtons = document.querySelectorAll(".category-button");
+      categoryButtons.forEach(function (button) {
+        button.addEventListener("click", changeButtonColor);
+      });
+    </script>
   </body>
 </html>

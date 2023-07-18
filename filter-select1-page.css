@@ -26,13 +26,14 @@
 }
 
 .select-year-button-container button,
-.select-product-button-container button {
+.select-category-button-container button,
+.select-subcategory-button-container button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 /* 연도 선택 버튼 */
-.select-year-button {
+.year-button {
   width: 100px;
   height: 50px;
   color: white;
@@ -42,22 +43,15 @@
   transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.select-year-button:hover {
+/* .year-button:hover {
   color: #7edc65;
   background-color: white;
   border: solid 2px #7edc65;
   border-radius: 20px;
-}
-
-.select-year-button:focus {
-  color: #7edc65;
-  background-color: white;
-  border: solid 2px #7edc65;
-  border-radius: 20px;
-}
+} */
 
 /* 제품 카테고리 선택 버튼 */
-.select-product-button {
+.category-button {
   width: 100px;
   height: 50px;
   color: white;
@@ -67,19 +61,22 @@
   transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.select-product-button:hover {
-  color: #7edc65;
-  background-color: white;
-  border: solid 2px #7edc65;
+.subcategory-button {
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: lightgray;
+  border: none;
   border-radius: 20px;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.select-product-button:focus {
+/* .select-category-button:hover {
   color: #7edc65;
   background-color: white;
   border: solid 2px #7edc65;
   border-radius: 20px;
-}
+} */
 
 @media screen and (max-width: 768px) {
   .filter-box-container {
