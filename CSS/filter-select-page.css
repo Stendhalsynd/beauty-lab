@@ -12,12 +12,6 @@
   0% {
     transform: translateY(100%);
   }
-  70% {
-    transform: translateY(-20%);
-  }
-  90% {
-    transform: translateY(10%);
-  }
   100% {
     transform: translateY(0%);
   }
