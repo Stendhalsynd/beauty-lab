@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <!-- filter-select-page.css link -->
-    <link
-      rel="stylesheet"
-      href="../CSS/filter-select-page-with-animation.css"
-    />
+    <link rel="stylesheet" href="../CSS/filter-select-page.css" />
 
     <!-- HTML link 태그를 활용한 Bootstrap 연동 -->
     <link
@@ -48,12 +45,12 @@
       </header>
     </div>
 
+    <!-- 연도 선택 -->
     <div class="body-container">
       <div class="filter-box-container">
         <header class="filter-box-header">필터</header>
         <div class="filter-select-box">
           <br />
-          <!-- 연도 선택 -->
           <div class="select-year-button-container">
             <div class="year"><h4>연도</h4></div>
             <button class="year-button" value="2021">2021</button>
@@ -63,14 +60,44 @@
         </div>
       </div>
 
+      <!-- 제품 카테고리 선택 -->
       <div class="filter-box-container">
         <header class="filter-box-header">필터</header>
         <div class="filter-select-box">
           <br />
-          <!-- 제품 카테고리 선택 -->
           <div class="select-category-button-container">
             <div class="category"><h4>카테고리</h4></div>
+            <div class="scene">
+              <div class="carousel">
+                <button class="category-button">스킨케어</button>
+                <button class="category-button">클렌징/필링</button>
+                <button class="category-button">마스크/팩</button>
+                <button class="category-button">선케어</button>
+                <button class="category-button">베이스</button>
+                <button class="category-button">아이</button>
+                <button class="category-button">립</button>
+                <button class="category-button">바디</button>
+                <button class="category-button">헤어</button>
+                <button class="category-button">네일</button>
+                <button class="category-button">향수</button>
+                <button class="category-button">이너뷰티</button>
+                <button class="category-button">스킨케어</button>
+              </div>
+            </div>
+            <div class="control-button-container">
+              <button class="previous-button">Previous</button>
+              <button class="next-button">Next</button>
+            </div>
           </div>
+        </div>
+      </div>
+
+      <!-- 서브 카테고리 선택 -->
+      <div class="filter-box-container" id="">
+        <header class="filter-box-header">필터</header>
+        <div class="filter-select-box">
+          <br />
+          <div class="select-subcategory-button-container"></div>
         </div>
       </div>
     </div>
@@ -183,6 +210,30 @@
       var categoryButtons = document.querySelectorAll(".category-button");
       categoryButtons.forEach(function (button) {
         button.addEventListener("click", changeButtonColor);
+      });
+
+      // 3d carousel slider 구현
+      var carousel = document.querySelector(".carousel");
+      var cellCount = 13;
+      var selectedIndex = 0;
+
+      function rotateCarousel() {
+        var angle = (selectedIndex / cellCount) * -360;
+        var cell;
+        carousel.style.transform =
+          "translateZ(-385px) rotateY(" + angle + "deg)";
+      }
+
+      var prevButton = document.querySelector(".previous-button");
+      prevButton.addEventListener("click", function () {
+        selectedIndex--;
+        rotateCarousel();
+      });
+
+      var nextButton = document.querySelector(".next-button");
+      nextButton.addEventListener("click", function () {
+        selectedIndex++;
+        rotateCarousel();
       });
     </script>
   </body>
