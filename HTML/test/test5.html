@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../CSS/test5.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty LAB</title>
+  </head>
+  <body>
+    <div class="scroll-container">
+      <div class="circle-container">
+        <button class="category-button" style="z-index: 80">스킨케어</button>
+        <button class="category-button">클렌징/필링</button>
+        <button class="category-button">마스크/팩</button>
+        <button class="category-button">선케어</button>
+        <button class="category-button">베이스</button>
+        <button class="category-button">아이</button>
+        <button class="category-button">립</button>
+        <button class="category-button">바디</button>
+        <button class="category-button">헤어</button>
+        <button class="category-button">네일</button>
+        <button class="category-button">향수</button>
+        <button class="category-button">기타</button>
+        <button class="category-button">이너뷰티</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const circleContainer = document.getElementById("circle-container");
+
+        document.addEventListener("scroll", function () {
+          const scrollX = window.scrollX; // 가로 스크롤 위치를 가져옵니다.
+          const snapInterval = 412; // 버튼 너비 + 간격에 따라 조절 (적절한 값을 설정해주세요)
+
+          let rotation = Math.floor(scrollX / snapInterval) * 30;
+          circleContainer.style.transform = `rotate(${rotation}deg)`;
+        });
+      });
+    </script>
+  </body>
+</html>
