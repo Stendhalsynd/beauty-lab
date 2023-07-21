@@ -92,6 +92,7 @@ class="hd-logo"
       backgroundElem.style.transform = `scale3d(${scaleValue},${scaleValue},${scaleValue})`;
       backgroundElem.style.opacity = 1;
       appDownloadElem.style.opacity = 1;
+      videowBgElem.style.transform = `scale3d(${scaleValue},${scaleValue},${scaleValue})`;
       videowBgElem.style.opaicty = 1;
       $(".menu .list .item").css("color", "white");
     } else {
