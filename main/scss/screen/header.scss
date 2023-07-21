@@ -1,0 +1,36 @@
+@use "../helper/" as *;
+
+.menu__button {
+  display: none;
+
+  @include mixin-res--mobile {
+    display: block;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+
+  & .list {
+    display: flex;
+    justify-content: flex-end;
+
+    & .item {
+      padding: 24px 18px;
+      color: #{$var-text-white};
+      font-size: 18px;
+
+      @include mixin-res--desktop {
+        padding: 24px 30px;
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+  }
+
+  @include mixin-res--mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+@use "variables" as v;
+$mobilePlus: v.$mobile + 1;
+$tabletPlus: v.$tablet + 1;
+
+// Mobile
+@mixin res--mobile {
+  @media screen and (max-width: #{v.$mobile}px) {
+    @content;
+  }
+}
+
+// Tablet
+@mixin res--tablet {
+  @media screen and (min-width: #{$mobilePlus}px) and (max-width: #{v.$tablet}px) {
+    @content;
+  }
+}
+
+// Desktop
+@mixin res--desktop {
+  @media screen and (min-width: #{$tabletPlus}px) {
+    @content;
+  }
+}

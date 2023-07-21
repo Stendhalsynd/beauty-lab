@@ -1,0 +1,29 @@
+@use "../helper/" as *;
+
+.shopping {
+  height: 300px;
+  background-color: #{$var-theme};
+  box-sizing: border-box;
+  display: flex;
+  // flex-wrap: wrap;
+  // align-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+
+  &-title {
+    color: #{$var-text-white};
+    flex: none;
+    width: 50%;
+    height: 50%;
+
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -1px;
+
+    transition: font-size 1s, line-height 1s, letter-spacing 1s;
+    text-align: center;
+    font-weight: 700;
+
+    z-index: 100;
+  }
+}

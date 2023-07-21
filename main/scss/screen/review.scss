@@ -1,0 +1,164 @@
+@use "../helper/" as *;
+
+.review {
+  padding: 140px 0 0;
+
+  @include mixin-res--desktop {
+    padding: 310px 0 210px;
+    max-width: 1070px;
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-left: 50px;
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mixin-res--desktop {
+      width: 490px;
+      padding-left: 40px;
+      align-items: flex-start;
+    }
+  }
+
+  &-title {
+    transition: font-size 1s, line-height 1s, letter-spacing 1s;
+    transition: font-size 1s, line-height 1s, letter-spacing 1s;
+
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    font-weight: 600;
+    text-align: center;
+    color: #{$var-text-default};
+
+    @include mixin-res--desktop {
+      font-size: 52px;
+      padding: 100px 0 0;
+      transition: font-size 1s;
+      line-height: 70px;
+      letter-spacing: -2.89px;
+      text-align: left;
+      box-sizing: border-box;
+      font-weight: 700;
+    }
+  }
+
+  &-desc {
+    color: #{$var-text-default};
+    text-align: center;
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -1px;
+
+    @include mixin-res--desktop {
+      font-size: 18px;
+      padding: 30px 0 0;
+      max-width: 1070px;
+      text-align: left;
+      box-sizing: border-box;
+      line-height: 29px;
+    }
+  }
+
+  &-area {
+    position: relative;
+    padding-top: 30px;
+    text-align: center;
+
+    @include mixin-res--desktop {
+      width: 100%;
+      padding-top: 40px;
+      left: -19px;
+      text-align: left;
+
+      display: block;
+      max-width: 580px;
+      margin: 0 auto;
+      transform: translate(0);
+    }
+  }
+
+  &-tag {
+    display: inline-block;
+    height: 40px;
+    margin: 15px 0 0 -4px;
+    padding: 0 18px;
+    border-radius: 30px;
+    color: #{$var-text-gray};
+    font-size: 21px;
+    line-height: 40px;
+
+    @include mixin-res--desktop {
+      position: relative;
+      height: 50px;
+      margin-top: 0;
+      font-size: 34px;
+      line-height: 51px;
+      letter-spacing: -1.89px;
+    }
+
+    &-list {
+      display: inline;
+
+      @include mixin-res--desktop {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-top: 20px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &-tag[aria-selected="true"] {
+    background: #{$var-theme};
+    color: #{$var-text-white};
+  }
+
+  &-card {
+    overflow: hidden;
+    width: 250px;
+    height: 472px;
+    margin: 55px auto 98px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px 12px #{$var-shadow-default},
+      0 4px 24px 0 #{$var-shadow-default}, 0 0 1px 0 #{$var-shadow-default};
+
+    @include mixin-res--desktop {
+      min-width: 360px;
+      min-height: 680px;
+    }
+
+    &-viewport {
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      border-radius: 20px;
+      -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+    }
+
+    &-wrap {
+      width: 100%;
+      white-space: nowrap;
+      transition-duration: 1s;
+      font-size: 0; // 폰트 크기를 0으로 설정해서 공백 제거
+    }
+
+    &-inner {
+      display: inline-block;
+      margin: 0;
+      font-size: 16px; // 원하는 폰트 크기로 다시 지정
+    }
+
+    &-video {
+      width: 100%;
+    }
+  }
+}
