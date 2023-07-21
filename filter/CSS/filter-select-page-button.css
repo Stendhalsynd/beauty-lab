@@ -1,0 +1,133 @@
+/* ---------- button ----------*/
+/* 필터 버튼 공통 속성 및 css 설정*/
+.select-year-button-container button,
+.select-category-button-container .category-button,
+.select-subcategory-button-container button {
+  width: 190px;
+  height: 120px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: lightgray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* hover 설정 */
+.year-button:hover,
+.subcategory-button:hover {
+  color: #7edc65;
+  background-color: white;
+  border: solid 2px #7edc65;
+  border-radius: 20px;
+}
+
+/* 제품 카테고리 선택 버튼 */
+.category-button {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* 각 제품 카테고리 선택 버튼의 위치 조절 */
+.category-button:nth-child(1) {
+  transform: rotateY(0deg) translateZ(385px);
+}
+.category-button:nth-child(2) {
+  transform: rotateY(30deg) translateZ(385px);
+}
+.category-button:nth-child(3) {
+  transform: rotateY(60deg) translateZ(385px);
+}
+.category-button:nth-child(4) {
+  transform: rotateY(90deg) translateZ(385px);
+}
+.category-button:nth-child(5) {
+  transform: rotateY(120deg) translateZ(385px);
+}
+.category-button:nth-child(6) {
+  transform: rotateY(150deg) translateZ(385px);
+}
+.category-button:nth-child(7) {
+  transform: rotateY(180deg) translateZ(385px);
+}
+.category-button:nth-child(8) {
+  transform: rotateY(210deg) translateZ(385px);
+}
+.category-button:nth-child(9) {
+  transform: rotateY(240deg) translateZ(385px);
+}
+.category-button:nth-child(10) {
+  transform: rotateY(270deg) translateZ(385px);
+}
+.category-button:nth-child(11) {
+  transform: rotateY(300deg) translateZ(385px);
+}
+.category-button:nth-child(12) {
+  transform: rotateY(330deg) translateZ(385px);
+}
+.category-button:nth-child(13) {
+  transform: rotateY(360deg) translateZ(385px);
+}
+
+.previous-button,
+.next-button {
+  margin: 10px;
+}
+
+/* .select-category-button:hover {
+  color: #7edc65;
+  background-color: white;
+  border: solid 2px #7edc65;
+  border-radius: 20px;
+} */
+
+/* 다음 페이지로 넘어가는 버튼 */
+.next-page-button {
+  width: 300px;
+  height: 80px;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  background-color: #89d8d3;
+  background-image: linear-gradient(315deg, #89d8d3 0%, #7edc65 74%);
+  border: none;
+  z-index: 1;
+}
+.next-page-button:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 20px;
+  background-color: #4dccc6;
+  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
+}
+.next-page-button:hover {
+  color: #fff;
+}
+.next-page-button:hover:after {
+  top: 0;
+  height: 100%;
+}
+.next-page-button:active {
+  top: 2px;
+}
