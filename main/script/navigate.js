@@ -5,7 +5,7 @@
     $(".shopping-title").on("click", function () {
       console.log("클릭!");
 
-      window.location.href = "../filter-select-page.html";
+      window.location.href = "../filter/filter-select-page.html";
     });
 
     $(".shopping-title").hover(
