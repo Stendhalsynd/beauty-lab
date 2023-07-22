@@ -2,15 +2,16 @@
 <html lang="en">
   <head>
     <!-- CSS link -->
-    <link rel="stylesheet" href="/filter/CSS/filter-select-page-button.css" />
     <link
       rel="stylesheet"
-      href="/filter/CSS/filter-select-page-container.css"
+      href="/filter/css/filter-select-page-container.css"
     />
+    <link rel="stylesheet" href="/filter/css/filter-select-page-button.css" />
     <link
       rel="stylesheet"
-      href="/filter/CSS/filter-select-page-background.css"
+      href="/filter/css/filter-select-page-background.css"
     />
+    <link rel="stylesheet" href="/filter/css/filter-select-page-header.css" />
 
     <!-- HTML link 태그를 활용한 Bootstrap 연동 -->
     <link
@@ -19,6 +20,11 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,30 +32,63 @@
     <title>Beauty LAB</title>
   </head>
   <body>
-    <!-- 임시 header -->
     <div class="header-container">
+      <!-- header -->
       <header
-        class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom"
+        class="d-flex justify-content-between position-fixed top-0 start-0"
+        style="
+          width: 100vw;
+          height: 65.79px;
+          background-color: white;
+          transform-origin: top left;
+          z-index: 1;
+        "
       >
         <a
           href="/"
-          class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+          class="px-4 position-absolute top-0 start-0 logo"
+          style="padding-top: 20px; padding-bottom: 20px"
         >
-          <svg class="bi me-2" width="40" height="32">
-            <use xlink:href="#bootstrap" />
-          </svg>
-          <span class="fs-4">Beauty LAB</span>
+          <img
+            src="../images/Beauty Lab.png"
+            alt="logo"
+            width="48px"
+            height="24px"
+            class="hd-logo"
+          />
         </a>
 
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="#" class="nav-link active" aria-current="page">Home</a>
-          </li>
-          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-        </ul>
+        <button
+          class="border border-0 bg-transparent px-3 position-absolute top-0 end-0 menu__button"
+          style="padding: 20px 16px"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill="#5EDFDF"
+              fill-rule="evenodd"
+              class="hd-menu"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+
+        <nav class="menu">
+          <ul class="list">
+            <li class="item">제품소개</li>
+            <li class="item">회사소개</li>
+            <li class="item">채용</li>
+            <li class="item">뉴스</li>
+            <li class="item">공지</li>
+            <li class="item">블로그</li>
+            <li class="item">광고문의</li>
+          </ul>
+        </nav>
       </header>
     </div>
 
@@ -118,7 +157,7 @@
       <button class="next-page-button"></button>
     </div>
 
-    <script src="/filter/JS/button-activity.js"></script>
-    <script src="/filter/JS/3d-carousel-slider.js"></script>
+    <script src="/filter/js/button-activity.js"></script>
+    <script src="/filter/js/3d-carousel-slider.js"></script>
   </body>
 </html>
