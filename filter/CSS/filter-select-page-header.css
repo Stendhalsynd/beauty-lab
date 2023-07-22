@@ -135,13 +135,13 @@ ul {
 }
 .menu .list .item {
   padding: 24px 18px;
-  color: #fff;
+  color: black;
   font-size: 18px;
 }
 @media screen and (min-width: 1020px) {
   .menu .list .item {
     padding: 24px 30px;
-    color: #fff;
+    color: black;
     font-size: 18px;
   }
 }

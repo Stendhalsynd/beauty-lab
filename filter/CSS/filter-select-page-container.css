@@ -1,3 +1,59 @@
+/* 반응형 */
+/* @media screen and (max-width: 768px) {
+  .filter-box-container {
+    width: 600px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1019px) {
+  .filter-box-container {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .filter-box-container {
+    width: 800px;
+  }
+} */
+
+@media screen and (min-width: 415px) and (max-width: 1019px) {
+  .viewport-container {
+    background-color: #e1fbda;
+  }
+
+  .right-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .viewport-container {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/filter-select-page-viewport-container-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .left-container {
+    width: 50%;
+  }
+
+  .right-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.mobile-app-container {
+  width: 414px;
+}
+
 /* filter-box 3개가 들어있는 body-container*/
 .body-container {
   display: flex;
@@ -5,7 +61,6 @@
   width: 100%;
   height: 100vh;
   margin: 0;
-  background-color: #daffc7;
 
   /* scroll-snap */
   flex-direction: row;
@@ -102,23 +157,4 @@
   bottom: 0;
   display: flex;
   justify-content: center;
-}
-
-/* 반응형 */
-@media screen and (max-width: 768px) {
-  .filter-box-container {
-    width: 600px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1019px) {
-  .filter-box-container {
-    width: 700px;
-  }
-}
-
-@media screen and (min-width: 1020px) {
-  .filter-box-container {
-    width: 800px;
-  }
 }
