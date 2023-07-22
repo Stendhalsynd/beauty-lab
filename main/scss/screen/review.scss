@@ -3,15 +3,21 @@
 .review {
   padding: 140px 0 0;
 
-  @include mixin-res--desktop {
-    padding: 310px 0 210px;
-    max-width: 1070px;
-    position: relative;
+  display: flex;
+  justify-content: center;
 
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding-left: 50px;
+  &-container {
+    @include mixin-res--desktop {
+      padding: 310px 0 210px;
+      max-width: 1070px;
+      position: relative;
+
+      display: flex;
+      flex-direction: row-reverse;
+
+      // justify-content: space-between;
+      // padding-left: 50px;
+    }
   }
 
   &-group {
@@ -21,13 +27,12 @@
 
     @include mixin-res--desktop {
       width: 490px;
-      padding-left: 40px;
+      padding-left: 80px;
       align-items: flex-start;
     }
   }
 
   &-title {
-    transition: font-size 1s, line-height 1s, letter-spacing 1s;
     transition: font-size 1s, line-height 1s, letter-spacing 1s;
 
     font-size: 32px;
@@ -115,11 +120,18 @@
         white-space: nowrap;
       }
     }
-  }
 
-  &-tag[aria-selected="true"] {
-    background: #{$var-theme};
-    color: #{$var-text-white};
+    &[aria-selected="false"] {
+      background: transparent;
+      color: #{$var-text-gray};
+      transition: background 1s, color 1s;
+    }
+
+    &[aria-selected="true"] {
+      background: #{$var-theme};
+      color: #{$var-text-white};
+      transition: background 1s, color 1s;
+    }
   }
 
   &-card {

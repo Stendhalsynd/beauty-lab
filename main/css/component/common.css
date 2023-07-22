@@ -114,39 +114,3 @@ ol,
 ul {
   list-style: none outside;
 }
-
-.menu__button {
-  display: none;
-}
-@media screen and (max-width: 768px) {
-  .menu__button {
-    display: block;
-  }
-}
-
-.menu {
-  display: flex;
-  justify-content: flex-end;
-  width: 100vw;
-}
-.menu .list {
-  display: flex;
-  justify-content: flex-end;
-}
-.menu .list .item {
-  padding: 24px 18px;
-  color: #fff;
-  font-size: 18px;
-}
-@media screen and (min-width: 1020px) {
-  .menu .list .item {
-    padding: 24px 30px;
-    color: #fff;
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .menu {
-    display: none;
-  }
-}

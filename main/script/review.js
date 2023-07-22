@@ -1,25 +1,3 @@
-// (function () {
-//   const wrapElem = $(".review-card-wrap");
-//   let count = 0;
-
-//   function updateReviewWrap() {
-//     // count를 기반으로 transform 스타일을 변경합니다.
-//     if (count === 0) {
-//       wrapElem.css("transform", "none");
-//     } else if (count === 1) {
-//       wrapElem.css("transform", "translate3d(-100%, 0px, 0px)");
-//     } else if (count === 2) {
-//       wrapElem.css("transform", "translate3d(-200%, 0px, 0px)");
-//     }
-
-//     // count를 증가시키고, 3으로 나눈 나머지를 구하여 0, 1, 2로 유지합니다.
-//     count = (count + 1) % 3;
-//   }
-
-//   // 3초마다 updateReviewWrap 함수를 호출합니다.
-//   setInterval(updateReviewWrap, 3000);
-// })();
-
 (function () {
   const wrapElem = $(".review-card-wrap");
   const videoElem = $(".review-card-video");
@@ -68,4 +46,40 @@
 
   // review-card-wrap 의 attribute 에 따라 observing 변화 시작
   observer.observe(wrapElem[0], { attributes: true });
+})();
+
+(function () {
+  function toggleAriaSelected() {
+    const reviewTagGroups = [
+      [0, 6, 8], // [neutral, 20s, not applicable]
+      [3, 5, 9], // [oily, combination, teens]
+      [2, 7, 10], // [30s, acne, sensitive]
+    ];
+    let currentGroupIndex = 0;
+    let currentGroup = reviewTagGroups[currentGroupIndex];
+
+    // 3초마다 실행되는 setInterval 함수
+    setInterval(() => {
+      // 이전 그룹의 태그들의 aria-selected를 false로 변경
+      for (const index of currentGroup) {
+        document
+          .getElementsByClassName("review-tag")
+          [index].setAttribute("aria-selected", "false");
+      }
+
+      // 그룹 인덱스를 증가시키고, 배열 범위를 넘어가면 다시 0으로 설정
+      currentGroupIndex = (currentGroupIndex + 1) % reviewTagGroups.length;
+      currentGroup = reviewTagGroups[currentGroupIndex];
+
+      // 새로운 그룹의 태그들의 aria-selected를 true로 설정
+      for (const index of currentGroup) {
+        document
+          .getElementsByClassName("review-tag")
+          [index].setAttribute("aria-selected", "true");
+      }
+    }, 3000); // 3초마다 실행 (3000 밀리초 = 3초)
+  }
+
+  // 페이지가 로드되면 toggleAriaSelected 함수 호출
+  window.onload = toggleAriaSelected;
 })();

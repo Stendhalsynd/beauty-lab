@@ -1,132 +1,15 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a,
-blockquote,
-body,
-button,
-dd,
-div,
-dl,
-dt,
-fieldset,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-legend,
-li,
-ol,
-p,
-pre,
-select,
-strong,
-td,
-textarea,
-th,
-ul {
-  margin: 0;
-  padding: 0;
-  word-break: keep-all;
-}
-
-strong {
-  font-weight: 700;
-}
-
-.top-contents-main {
-  width: 100vw;
-  top: 50vh;
-  text-align: center;
-  position: fixed;
-  z-index: 9;
-}
-.top-contents-title {
-  color: #fff;
-}
-.top-contents-desc {
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-.top-contents-sub {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  text-align: center;
-  z-index: 3;
-}
-.top-contents-sub .top-contents-desc {
-  color: #fff;
-  font-weight: 700;
-}
-
-.main-visual-backdrop {
-  background: rgba(0, 0, 0, 0);
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  transform: translate3d(0px, -40%, 0px);
-  z-index: 3;
-}
-
-li,
-ol,
-ul {
-  list-style: none outside;
-}
-
 .review {
   padding: 140px 0 0;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (min-width: 1020px) {
-  .review {
+  .review-container {
     padding: 310px 0 210px;
     max-width: 1070px;
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-    padding-left: 50px;
   }
 }
 .review-group {
@@ -137,12 +20,11 @@ ul {
 @media screen and (min-width: 1020px) {
   .review-group {
     width: 490px;
-    padding-left: 40px;
+    padding-left: 80px;
     align-items: flex-start;
   }
 }
 .review-title {
-  transition: font-size 1s, line-height 1s, letter-spacing 1s;
   transition: font-size 1s, line-height 1s, letter-spacing 1s;
   font-size: 32px;
   line-height: 42px;
@@ -230,9 +112,15 @@ ul {
     white-space: nowrap;
   }
 }
+.review-tag[aria-selected=false] {
+  background: transparent;
+  color: #c8c8c8;
+  transition: background 1s, color 1s;
+}
 .review-tag[aria-selected=true] {
   background: #7edc65;
   color: #fff;
+  transition: background 1s, color 1s;
 }
 .review-card {
   overflow: hidden;

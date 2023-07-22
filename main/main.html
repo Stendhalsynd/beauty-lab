@@ -23,10 +23,12 @@
       crossorigin="anonymous"
     ></script>
     <link rel="icon" href="../images/favicon.ico" />
+    <!-- common css -->
+    <link rel="stylesheet" href="./css/component/common.css" />
     <!-- header css -->
-    <link rel="stylesheet" href="./css/screen/header.css" />
+    <link rel="stylesheet" href="./css/component/header.css" />
     <!-- main page css -->
-    <link rel="stylesheet" href="./css/top.css" />
+    <link rel="stylesheet" href="./css/screen/top.css" />
     <link rel="stylesheet" href="./css/screen/info.css" />
     <link rel="stylesheet" href="./css/screen/promotion.css" />
     <link rel="stylesheet" href="./css/screen/review.css" />
@@ -35,12 +37,12 @@
   <body>
     <!-- header -->
     <header
-      class="d-flex justify-content-between position-fixed top-0 start-0"
+      class="d-flex justify-content-between position-fixed top-0 start-0 header"
       style="
         width: 100vw;
         height: 65.79px;
         transform-origin: top left;
-        z-index: 1;
+        z-index: 20;
       "
     >
       <a
@@ -181,100 +183,46 @@
             <ul class="info-counting-list">
               <li class="info-counting-item li1" style="transform: none">
                 <div class="counting-title">
-                  <div
-                    class="counting-icon"
-                    aria-hidden="true"
-                    style="
-                      width: 12px;
-                      height: 12px;
-                      border-width: 2px;
-                      background-color: white;
-                      transform: none;
-                    "
-                  ></div>
-                  <span
-                    class="coounting-txt"
-                    style="transform: translate3d(45px, -5px, 0px)"
-                    >누적 다운로드</span
-                  >
+                  <div class="counting-icon" aria-hidden="true"></div>
+                  <span class="counting-txt">누적 다운로드</span>
+                </div>
+                <div class="counting-index" aria-selected="false">
+                  11,067,713
                 </div>
               </li>
-              <li
-                class="info-counting-item li2"
-                style="transform: translate3d(0px, 100px, 0px)"
-              >
+              <li class="info-counting-item li2">
                 <div class="counting-title">
                   <div class="counting-icon" aria-hidden="true"></div>
-                  <span
-                    class="counting-txt"
-                    style="
-                      color: rgb(33, 37, 41);
-                      transform: translate3d(30px, 0px, 0px);
-                    "
-                    >사용자 리뷰</span
-                  >
+                  <span class="counting-txt">사용자 리뷰</span>
                 </div>
-                <div class="counting-index">
-                  <div style="height: 100px; transform: none">
-                    <div>7,747,836</div>
-                  </div>
+                <div class="counting-index" aria-selected="false">
+                  7,747,836
                 </div>
               </li>
-              <li
-                class="info-counting-item li3"
-                style="transform: translate3d(0px, 220px, 0px)"
-              >
+              <li class="info-counting-item li3">
                 <div class="counting-title">
-                  <div
-                    class="counting-icon"
-                    aria-hidden="true"
-                    style="
-                      width: 12px;
-                      height: 12px;
-                      border-width: 2px;
-                      background-color: white;
-                      transform: none;
-                    "
-                  ></div>
-                  <span
-                    class="coounting-txt"
-                    style="transform: translate3d(45px, -5px, 0px)"
+                  <div class="counting-icon" aria-hidden="true"></div>
+                  <span class="counting-txt" aria-selected="false"
                     >등록된 제품</span
                   >
                 </div>
+                <div class="counting-index" aria-selected="false">297,589</div>
               </li>
-              <li
-                class="info-counting-item li4"
-                style="transform: translate3d(0px, 300px, 0px)"
-              >
+              <li class="info-counting-item li4">
                 <div class="counting-title">
-                  <div
-                    class="counting-icon"
-                    aria-hidden="true"
-                    style="
-                      width: 12px;
-                      height: 12px;
-                      border-width: 2px;
-                      background-color: white;
-                      transform: none;
-                    "
-                  ></div>
-                  <span
-                    class="coounting-txt"
-                    style="transform: translate3d(45px, -5px, 0px)"
+                  <div class="counting-icon" aria-hidden="true"></div>
+                  <span class="counting-txt" aria-selected="false"
                     >함께하는 브랜드</span
                   >
                 </div>
+                <div class="counting-index" aria-selected="false">16,226</div>
               </li>
             </ul>
           </div>
           <div
             class="info-image"
             aria-hidden="true"
-            style="
-              opacity: 1;
-              background-image: url('https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/product-ranking/this-hwahae02.jpg');
-            "
+            style="opacity: 1; background-image: url('../../images/review.jpg')"
           ></div>
         </div>
         <p class="info-date">누적 다운로드: 2022년 9월 기준</p>
@@ -302,83 +250,87 @@
 
       <!-- main review section -->
       <section class="review">
-        <div class="review-group">
-          <h3 class="review-title">
-            나만의 뷰티를 찾는<br />내 피부 맞춤 리뷰
-          </h3>
-          <div class="review-area">
-            <div class="review-tag-list">
-              <span class="review-tag" aria-selected="true"> 중성 </span>
-              <span class="review-tag" aria-selected="flas"> 40대 이상 </span>
-              <span class="review-tag" aria-selected="false"> 지성 </span>
-              <span class="review-tag" aria-selected="false"> 30대 </span>
+        <div class="review-container">
+          <div class="review-group">
+            <h3 class="review-title">
+              나만의 뷰티를 찾는<br />내 피부 맞춤 리뷰
+            </h3>
+            <div class="review-area">
+              <div class="review-tag-list">
+                <span class="review-tag" aria-selected="true"> 중성 </span>
+                <span class="review-tag" aria-selected="flase">
+                  40대 이상
+                </span>
+                <span class="review-tag" aria-selected="false"> 지성 </span>
+                <span class="review-tag" aria-selected="false"> 30대 </span>
+              </div>
+              <div class="review-tag-list">
+                <span class="review-tag" aria-selected="false"> 아토피 </span>
+                <span class="review-tag" aria-selected="false"> 여드름 </span>
+                <span class="review-tag" aria-selected="true"> 20대 </span>
+                <span class="review-tag" aria-selected="false"> 복합성 </span>
+              </div>
+              <div class="review-tag-list">
+                <span class="review-tag" aria-selected="true"> 해당없음 </span>
+                <span class="review-tag" aria-selected="false"> 민감성 </span>
+                <span class="review-tag" aria-selected="false"> 10대 </span>
+                <span class="review-tag" aria-selected="false"> 건성 </span>
+              </div>
             </div>
-            <div class="review-tag-list">
-              <span class="review-tag" aria-selected="false"> 아토피 </span>
-              <span class="review-tag" aria-selected="false"> 여드름 </span>
-              <span class="review-tag" aria-selected="true"> 20대 </span>
-              <span class="review-tag" aria-selected="false"> 복합성 </span>
-            </div>
-            <div class="review-tag-list">
-              <span class="review-tag" aria-selected="true"> 해당없음 </span>
-              <span class="review-tag" aria-selected="false"> 민감성 </span>
-              <span class="review-tag" aria-selected="false"> 10대 </span>
-              <span class="review-tag" aria-selected="false"> 건성 </span>
-            </div>
+            <p class="review-desc">
+              Beauty Lab 사용자들이 작성한 솔직하고 균형있는 리뷰 중<br />나에게
+              꼭 맞는 '내 피부 맞춤 리뷰'를 만나보세요.
+            </p>
           </div>
-          <p class="review-desc">
-            Beauty Lab 사용자들이 작성한 솔직하고 균형있는 리뷰 중<br />나에게
-            꼭 맞는 '내 피부 맞춤 리뷰'를 만나보세요.
-          </p>
-        </div>
 
-        <div class="review-card" style="height: 472px">
-          <div class="review-card-viewport">
-            <div class="review-card-wrap" style="transform: none">
-              <div class="review-card-inner">
-                <video
-                  class="review-card-video card01"
-                  preload="auto"
-                  playsinline=""
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source
-                    src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-01.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div class="review-card-inner">
-                <video
-                  class="review-card-video card02"
-                  preload="auto"
-                  playsinline=""
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source
-                    src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-02.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-              </div>
-              <div class="review-card-inner">
-                <video
-                  class="review-card-video card03"
-                  preload="auto"
-                  playsinline=""
-                  autoplay
-                  loop
-                  muted
-                >
-                  <source
-                    src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-03.mp4"
-                    type="video/mp4"
-                  />
-                </video>
+          <div class="review-card" style="height: 472px">
+            <div class="review-card-viewport">
+              <div class="review-card-wrap" style="transform: none">
+                <div class="review-card-inner">
+                  <video
+                    class="review-card-video card02"
+                    preload="auto"
+                    playsinline=""
+                    autoplay
+                    loop
+                    muted
+                  >
+                    <source
+                      src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-02.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="review-card-inner">
+                  <video
+                    class="review-card-video card01"
+                    preload="auto"
+                    playsinline=""
+                    autoplay
+                    loop
+                    muted
+                  >
+                    <source
+                      src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-01.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <div class="review-card-inner">
+                  <video
+                    class="review-card-video card03"
+                    preload="auto"
+                    playsinline=""
+                    autoplay
+                    loop
+                    muted
+                  >
+                    <source
+                      src="https://hwahae-homepage.s3.ap-northeast-2.amazonaws.com/public/images/home/service-review-03.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
               </div>
             </div>
           </div>
@@ -391,6 +343,7 @@
       </section>
 
       <script src="./script/top.js"></script>
+      <script src="./script/info.js"></script>
       <script src="./script/review.js"></script>
       <script src="./script/navigate.js"></script>
     </main>

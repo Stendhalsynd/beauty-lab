@@ -1,17 +1,13 @@
-@use "./helper/" as *;
-
 @media screen and (max-width: 768px) {
   .top-contents-title {
     font-size: 54px;
     letter-spacing: -3px;
     line-height: 68px;
   }
-
   .top-contents-desc {
     padding-top: 20px;
     font-size: 19px;
   }
-
   .top-contents-download {
     position: absolute;
     bottom: 72px;
@@ -23,7 +19,6 @@
     z-index: 10;
     display: block;
   }
-
   .top-contents-download.sticky {
     position: fixed;
     z-index: 2;
@@ -33,7 +28,6 @@
     padding: 0;
     display: block;
   }
-
   .top-contents-download-link {
     border: none;
     display: block;
@@ -47,44 +41,37 @@
     text-align: center;
     line-height: 58px;
   }
-
   .top-contents-sub {
     transform: translateY(-70%);
   }
-
   .top-contents-sub .top-contents-desc {
     padding: 10px 0;
     font-size: 15px;
   }
-
   .main-background01 {
     width: 100vw;
     height: 100vh;
-    background-image: url("../../images/main-bg.jpg");
+    background-image: url("../../../images/main-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
     min-width: 248px;
-
     top: 0vh;
     position: fixed;
     display: block;
   }
-
   .iframe-container,
   iframe,
   .menu {
     display: none;
   }
 }
-
 @media screen and (min-width: 769px) {
   .hd-logo {
     width: 58px;
     height: 29px;
   }
-
   .iframe-container {
     position: fixed;
     top: 0;
@@ -93,7 +80,6 @@
     height: 100vh;
     overflow: hidden;
   }
-
   iframe {
     position: absolute;
     top: 0;
@@ -102,32 +88,26 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
   .main-background01 {
     display: none;
   }
-
   .top-contents-title {
     font-size: 85px;
     letter-spacing: -3px;
     line-height: 150%;
   }
-
   .top-contents-desc {
     padding-top: 30px;
     font-size: 30px;
   }
-
   .top-contents-download,
   .top-contents-download.sticky,
   .top-contents-download-link {
     display: none;
   }
-
   .top-contents-sub {
     transform: translateY(-50%);
   }
-
   .top-contents-sub .top-contents-desc {
     padding: 15px 0;
     font-size: 30px;
