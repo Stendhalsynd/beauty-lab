@@ -89,6 +89,8 @@ height="24px"
 class="hd-logo"
 />`);
       menu.setAttribute("fill", "#FFFFFF");
+      $(".header").css("background", "transparent");
+
       backgroundElem.style.transform = `scale3d(${scaleValue},${scaleValue},${scaleValue})`;
       backgroundElem.style.opacity = 1;
       appDownloadElem.style.opacity = 1;
@@ -104,6 +106,7 @@ height="24px"
 class="hd-logo"
 />`);
       menu.setAttribute("fill", "#7EDC65");
+      $(".header").css("background", "white");
 
       const bgOpacityValue = Math.max(
         1 - (posY - window.innerHeight) / window.innerHeight,

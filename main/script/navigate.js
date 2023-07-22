@@ -11,12 +11,10 @@
     $(".shopping-title").hover(
       function () {
         // 마우스를 올렸을 때의 동작
-        console.log("Hover!");
         $(this).css("font-size", "42px");
       },
       function () {
         // 마우스를 내렸을 때의 동작
-        console.log("Unhover!");
         $(this).css("font-size", "32px");
       }
     );
