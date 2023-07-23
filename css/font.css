@@ -1,0 +1,60 @@
+/*! reset */
+@font-face {
+  src: url("../font/AppleSDGothicNeoB.otf");
+  font-family: "applegothicB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoB.ttf");
+  font-family: "applegothicB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoEB.otf");
+  font-family: "applegothicEB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoEB.ttf");
+  font-family: "applegothicEB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoSB.otf");
+  font-family: "applegothicSB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoSB.ttf");
+  font-family: "applegothicSB";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoL.otf");
+  font-family: "applegothicL";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoL.ttf");
+  font-family: "applegothicL";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoR.otf");
+  font-family: "applegothicR";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoR.ttf");
+  font-family: "applegothicR";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoM.otf");
+  font-family: "applegothicM";
+}
+
+@font-face {
+  src: url("../font/AppleSDGothicNeoM.ttf");
+  font-family: "applegothicM";
+}
