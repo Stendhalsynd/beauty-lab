@@ -23,9 +23,9 @@
 }
 
 /* 필터 버튼 공통 속성 및 css 설정*/
-.select-year-button-container button,
-.select-category-button-container .category-button,
-.select-subcategory-button-container button {
+.year-button,
+.category-button,
+.subcategory-button {
   width: 190px;
   height: 120px;
   border: none;
@@ -34,7 +34,8 @@
   background-color: lightgray;
   margin-top: 5px;
   margin-bottom: 5px;
-  transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out, color 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out;
 }
 
 /* hover 설정 */
@@ -44,6 +45,8 @@
   background-color: white;
   border: solid 2px #7edc65;
   border-radius: 20px;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
 
 /* 제품 카테고리 선택 버튼 */
@@ -94,17 +97,57 @@
   transform: rotateY(360deg) translateZ(385px);
 }
 
-.previous-button,
-.next-button {
+.control-button-container button {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
   margin: 10px;
+  border: 2px solid #7edc65;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  background: #7edc65;
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
 }
 
-/* .select-category-button:hover {
+.control-button-container button:hover {
+  background: transparent;
   color: #7edc65;
-  background-color: white;
-  border: solid 2px #7edc65;
-  border-radius: 20px;
-} */
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+}
+
+.control-button-container button:before,
+.control-button-container button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #7edc65;
+  transition: 400ms ease all;
+}
+
+.control-button-container button:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.control-button-container button:hover:before,
+.control-button-container button:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
 
 /* 다음 페이지로 넘어가는 버튼 */
 .next-page-button {
@@ -127,6 +170,7 @@
   border: none;
   z-index: 1;
 }
+
 .next-page-button:after {
   position: absolute;
   content: "";
@@ -142,6 +186,7 @@
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
   transition: all 0.3s ease;
 }
+
 .next-page-button:hover {
   color: #fff;
 }

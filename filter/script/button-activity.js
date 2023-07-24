@@ -150,3 +150,40 @@ function setNextPageButtonContent(content) {
 document.addEventListener("DOMContentLoaded", function () {
   setNextPageButtonContent();
 });
+
+// "next-page-button"을 클릭했을 때 처리하는 함수
+function handleNextPageButtonClick() {
+  if (
+    selectedYear !== null &&
+    selectedCategory !== null &&
+    selectedSubcategory !== null
+  ) {
+    // 선택된 값들을 사용하여 URL을 생성하고 해당 페이지로 이동
+    let url = "";
+    if (
+      selectedYear === "2023" &&
+      selectedCategory === "스킨케어" &&
+      selectedSubcategory === "앰플/세럼"
+    ) {
+      url = "../list/serum list/serum.html";
+    } else if (
+      selectedYear === "2023" &&
+      selectedCategory === "클렌징/필링" &&
+      selectedSubcategory === "클렌징 폼"
+    ) {
+      url = "../list/cleansing_list/cleansing.html";
+    }
+
+    if (url) {
+      window.location.href = url;
+    } else {
+      alert("선택된 페이지가 없습니다.");
+    }
+  } else {
+    alert("모든 값을 선택해주세요!");
+  }
+}
+
+// "next-page-button"에 이벤트 리스너 등록
+const nextPageButton = document.querySelector(".next-page-button");
+nextPageButton.addEventListener("click", handleNextPageButtonClick);
