@@ -5,6 +5,12 @@
     transition: opacity 1s, margin-left 1s;
 }
 
+.youtube{
+    background-color: rgb(192, 255, 190);
+    width:50px;
+
+}
+
 body {
     margin: 0;
     min-height: 100vh;
@@ -193,11 +199,9 @@ body {
     max-height: 70vh; /* 최대 높이를 뷰포트의 80%로 설정 */
     overflow: hidden; /* 내용이 넘칠 경우 스크롤 숨김 */
   }
-  
-  
-  
+ 
   .allIngredient {
-    font-size: 12px;
+    font-size: 14px;
     color: rgb(150, 150, 150);
     height: 50%;
     line-height: normal;
@@ -292,7 +296,6 @@ body {
   }
   #productDescription img {
     width: 40vw;
-    height: 45vh;
     padding: 1em;
   }
   
