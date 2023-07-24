@@ -1,4 +1,27 @@
-/* ---------- button ----------*/
+/* 반응형: 모바일 */
+@media screen and (max-width: 414px) {
+  .next-page-button {
+    width: 300px;
+    height: 80px;
+  }
+}
+
+/* 반응형: 테블릿 */
+@media screen and (min-width: 415px) and (max-width: 1019px) {
+  .next-page-button {
+    width: 300px;
+    height: 80px;
+  }
+}
+
+/* 반응형: 데스크탑 */
+@media screen and (min-width: 1020px) {
+  .next-page-button {
+    width: 300px;
+    height: 100px;
+  }
+}
+
 /* 필터 버튼 공통 속성 및 css 설정*/
 .select-year-button-container button,
 .select-category-button-container .category-button,
@@ -85,8 +108,6 @@
 
 /* 다음 페이지로 넘어가는 버튼 */
 .next-page-button {
-  width: 300px;
-  height: 80px;
   color: #fff;
   border-radius: 20px;
   padding: 10px 25px;
