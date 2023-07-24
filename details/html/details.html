@@ -102,19 +102,26 @@
 
     <div class="top-container">
       <div class="body-container">
+        <img class="stamp" src="../../images/details/ample.png"></img>
         <div class="images">
-          <img class="mainImage" src="../../images/aboutme/1.jpg" id="big" />
+
+            <img
+            class="mainImage"
+            src="../../images/details/aboutme/1.jpg"
+            id="big"
+          />
+
           <div class="sideImage">
             <img
-              src="../../images/aboutme/1.jpg"
+              src="../../images/details/aboutme/1.jpg"
               onmouseover="showBig('1.jpg');"
             />
             <img
-              src="../../images/aboutme/2.jpg"
+              src="../../images/details/aboutme/2.jpg"
               onmouseover="showBig('2.jpg');"
             />
             <img
-              src="../../images/aboutme/3.jpg"
+              src="../../images/details/aboutme/3.jpg"
               onmouseover="showBig('3.jpg');"
             />
           </div>
@@ -127,6 +134,8 @@
               [2023앰플/모공&진정TOP]숲 진정 수분 세럼 50ml</a
             >
           </div>
+
+          
 
           <div id="explanation">
             <div class="price">
@@ -248,12 +257,14 @@
           </tbody>
         </table>
 
+        <div class="fadeinleft">Fade In</div>
+
         <div
           class="d-img"
           style="display: flex; flex-direction: column; padding-top: 5vh"
         >
-          <img src="../../images/aboutme/aboutme_test.jpg" />
-          <img src="../../images/aboutme/aboutme_test2.jpg" />
+          <img src="../../images/details/aboutme/aboutme_test.jpg" />
+          <img src="../../images/details/aboutme/aboutme_test2.jpg" />
         </div>
       </div>
 
@@ -263,6 +274,10 @@
             href="https://search.shopping.naver.com/catalog/27570049527?cat_id=50000439&frm=NVSCPRO&query=%EC%88%B2+%EC%A7%84%EC%A0%95+%EC%88%98%EB%B6%84+%EC%84%B8%EB%9F%BC&NaPm=ct%3Dlkai0o8o%7Cci%3D57d36d4bbb547608db49e97f72c0d5fde8ef5eea%7Ctr%3Dsls%7Csn%3D95694%7Chk%3De1819b2e2c2c65db3ef4eb93c774167de62b7f5d"
             >어바웃미 숲 진정 수분 세럼 50ml 구매하기</a
           >
+          <div class="buttons">
+            <button class="btn-hover color-1 buy">어바웃미 숲 진정 수분 세럼 50ml 구매하기</button>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -307,11 +322,26 @@
 
     function showBig(val) {
       var obj = document.getElementById("big");
-      obj.src = "./images/aboutme/" + val;
+      obj.src = "../../images/details/aboutme/" + val;
     }
-    function showBig(val) {
-      var obj = document.getElementById("big");
-      obj.src = "../../image/" + val;
-    }
+
+    $(document).ready(function() {
+      $(".buy").click(function() {
+    // 이동하고자 하는 URL을 아래에 입력하세요.
+    window.location.href = "https://search.shopping.naver.com/catalog/27570049527?cat_id=50000439&frm=NVSCPRO&query=%EC%88%B2+%EC%A7%84%EC%A0%95+%EC%88%98%EB%B6%84+%EC%84%B8%EB%9F%BC&NaPm=ct%3Dlkai0o8o%7Cci%3D57d36d4bbb547608db49e97f72c0d5fde8ef5eea%7Ctr%3Dsls%7Csn%3D95694%7Chk%3De1819b2e2c2c65db3ef4eb93c774167de62b7f5d";
+  });
+});
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.fadeinleft').each( function(i){
+            var bottom_of_element = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).css({'opacity':'1','margin-left':'0px'});
+            }
+        }); 
+    });
+});   
   </script>
 </html>
