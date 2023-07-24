@@ -59,7 +59,7 @@
         style="padding-top: 20px; padding-bottom: 20px"
       >
         <img
-          src="../images/Beauty Lab.png"
+          src="../../images/Beauty Lab.png"
           alt="logo"
           width="48px"
           height="24px"
@@ -103,18 +103,18 @@
     <div class="top-container">
       <div class="body-container">
         <div class="images">
-          <img class="mainImage" src="../images/aboutme/1.jpg" id="big" />
+          <img class="mainImage" src="../../images/aboutme/1.jpg" id="big" />
           <div class="sideImage">
             <img
-              src="../images/aboutme/1.jpg"
+              src="../../images/aboutme/1.jpg"
               onmouseover="showBig('1.jpg');"
             />
             <img
-              src="../images/aboutme/2.jpg"
+              src="../../images/aboutme/2.jpg"
               onmouseover="showBig('2.jpg');"
             />
             <img
-              src="../images/aboutme/3.jpg"
+              src="../../images/aboutme/3.jpg"
               onmouseover="showBig('3.jpg');"
             />
           </div>
@@ -252,8 +252,8 @@
           class="d-img"
           style="display: flex; flex-direction: column; padding-top: 5vh"
         >
-          <img src="../images/aboutme/aboutme_test.jpg" />
-          <img src="../images/aboutme/aboutme_test2.jpg" />
+          <img src="../../images/aboutme/aboutme_test.jpg" />
+          <img src="../../images/aboutme/aboutme_test2.jpg" />
         </div>
       </div>
 
@@ -304,5 +304,14 @@
     document
       .getElementById("productInfo")
       .addEventListener("click", goods_detailinfo);
+
+    function showBig(val) {
+      var obj = document.getElementById("big");
+      obj.src = "./images/aboutme/" + val;
+    }
+    function showBig(val) {
+      var obj = document.getElementById("big");
+      obj.src = "../../image/" + val;
+    }
   </script>
 </html>
