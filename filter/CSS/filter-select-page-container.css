@@ -1,7 +1,18 @@
+/* 반응형: 모바일 */
+@media screen and (max-width: 414px) {
+  .center-area {
+    display: none;
+  }
+}
+
 /* 반응형: 테블릿 */
 @media screen and (min-width: 415px) and (max-width: 1019px) {
   .viewport-container {
     background-color: #e1fbda;
+  }
+
+  .center-area {
+    display: none;
   }
 
   .right-container {
@@ -24,6 +35,9 @@
 
   .left-container {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .right-container {
@@ -31,9 +45,12 @@
     display: flex;
     justify-content: center;
   }
+
+  /* 다음 페이지로 넘어가는 버튼이 들어있는 container */
+  .next-page-button-container {
+  }
 }
 
-/* 반응형: 모바일 */
 .viewport-container {
   width: 100%;
   height: calc(100vh - 65.79px);
