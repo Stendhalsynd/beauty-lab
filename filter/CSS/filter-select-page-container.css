@@ -3,6 +3,16 @@
   .center-area {
     display: none;
   }
+
+  /* 다음 페이지로 넘어가는 버튼이 들어있는 container */
+  .next-page-button-container {
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* 반응형: 테블릿 */
@@ -17,6 +27,16 @@
 
   .right-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 다음 페이지로 넘어가는 버튼이 들어있는 container */
+  .next-page-button-container {
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    bottom: 10px;
     display: flex;
     justify-content: center;
   }
@@ -37,7 +57,11 @@
     width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+  }
+
+  .center-area {
+    position: absolute;
+    top: 300px;
   }
 
   .right-container {
@@ -48,6 +72,8 @@
 
   /* 다음 페이지로 넘어가는 버튼이 들어있는 container */
   .next-page-button-container {
+    position: absolute;
+    bottom: 300px;
   }
 }
 
@@ -159,14 +185,4 @@
   transform: translateZ(-207px);
   transform-style: preserve-3d;
   transition: transform 1s;
-}
-
-/* 다음 페이지로 넘어가는 버튼이 들어있는 container */
-.next-page-button-container {
-  position: absolute;
-  right: 10%;
-  left: 10%;
-  bottom: 10px;
-  display: flex;
-  justify-content: center;
 }
