@@ -1,0 +1,213 @@
+.bg {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    #4aadeb62 3%,
+    #6ad2cd 38%,
+    #b7eba7 68%,
+    #d4f3ca 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+.title {
+  margin-top: 200px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.slider .slider__inner {
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 750px;
+  height: 400px;
+  margin: 0 auto;
+}
+.slider .slider__inner .slider__item {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+.slider .slider__inner .slider__item-trigger-next {
+  left: 15%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-trigger-previous {
+  left: 85%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-selected {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
+    0 0 100px rgba(255, 255, 255, 0.1);
+  height: 300px;
+  opacity: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 2;
+}
+
+.slider__item-selected:hover {
+  width: 50%;
+  height: 50%;
+  transition: width 0.8s;
+  height: 0.8s;
+}
+
+.slider .slider__inner .slider__item-previous,
+.slider .slider__inner .slider__item-next {
+  height: 200px;
+  opacity: 1;
+  width: 200px;
+  z-index: 1;
+}
+.slider .slider__inner .slider__item-last,
+.slider .slider__inner .slider__item-first {
+  opacity: 0.4;
+  z-index: 0;
+}
+.slider .slider__inner .slider__item-previous {
+  left: 30%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-next {
+  left: 70%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-first {
+  left: 15%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-last {
+  left: 85%;
+  transform: translateX(-50%);
+}
+.slider .slider__inner .slider__item-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slider .slider__inner .slider__item-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.slider .slider__inner .slider__item-datas {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  font-family: "Arial";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slider .slider__controls {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 750px) {
+  .slider .slider__controls {
+    display: none;
+  }
+}
+.slider .slider__controls-previous,
+.slider .slider__controls-next {
+  border: 0;
+  cursor: pointer;
+  font-size: 50px;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 0;
+}
+.slider .slider__controls-previous:focus,
+.slider .slider__controls-next:focus {
+  outline: none;
+}
