@@ -1,85 +1,88 @@
+.all {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 1000px) {
+  .all {
+    background-image: url(/list/bg2.png);
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.left {
+  width: 50%;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .right {
+    width: 50%;
+
+    box-sizing: border-box;
+  }
+  .left {
+    /* display: block; */
+    margin-top: 130px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+}
+.video {
+  margin-top: 40px;
+}
+.sub {
+  display: flex;
+}
+.sub-video {
+  margin-right: 30px;
+}
+.sub-v {
+  margin-top: 20px;
+  width: 150px;
+  height: 100px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .sub-v {
+    display: block;
+  }
+}
+
 .bg {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  margin: auto;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  overflow: auto;
-  background: linear-gradient(
-    315deg,
-    #4aadeb62 3%,
-    #6ad2cd 38%,
-    #b7eba7 68%,
-    #d4f3ca 98%
-  );
-  animation: gradient 15s ease infinite;
-  background-size: 400% 400%;
-  background-attachment: fixed;
+  background-color: #7fdc6525;
 }
 
-@keyframes gradient {
-  0% {
-    background-position: 0% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
-}
-.wave {
-  background: rgb(255 255 255 / 25%);
-  border-radius: 1000% 1000% 0 0;
-  position: fixed;
-  width: 200%;
-  height: 12em;
-  animation: wave 10s -3s linear infinite;
-  transform: translate3d(0, 0, 0);
-  opacity: 0.8;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.wave:nth-of-type(2) {
-  bottom: -1.25em;
-  animation: wave 18s linear reverse infinite;
-  opacity: 0.8;
-}
-
-.wave:nth-of-type(3) {
-  bottom: -2.5em;
-  animation: wave 20s -1s reverse infinite;
-  opacity: 0.9;
-}
-
-@keyframes wave {
-  2% {
-    transform: translateX(1);
-  }
-
-  25% {
-    transform: translateX(-25%);
-  }
-
-  50% {
-    transform: translateX(-50%);
-  }
-
-  75% {
-    transform: translateX(-25%);
-  }
-
-  100% {
-    transform: translateX(1);
-  }
+.video-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: ROBOTO;
+  margin-top: 70px;
 }
 
 .title {
   margin-top: 200px;
   text-align: center;
   font-size: 30px;
+  font-family: ROBOTO;
 }
 
 .slider {
@@ -87,12 +90,26 @@
   width: 100%;
   max-width: 100%;
 }
+
+@media screen and (min-width: 1000px) {
+  .slider {
+    right: 0;
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 999px) {
+  .slider {
+    right: 0;
+    margin-top: 150px;
+  }
+}
+
 .slider .slider__inner {
   display: flex;
   position: relative;
   align-items: center;
   max-width: 750px;
-  height: 400px;
+  height: 220px;
   margin: 0 auto;
 }
 .slider .slider__inner .slider__item {
@@ -124,14 +141,6 @@
   width: 300px;
   z-index: 2;
 }
-
-.slider__item-selected:hover {
-  width: 50%;
-  height: 50%;
-  transition: width 0.8s;
-  height: 0.8s;
-}
-
 .slider .slider__inner .slider__item-previous,
 .slider .slider__inner .slider__item-next {
   height: 200px;
@@ -209,5 +218,49 @@
 }
 .slider .slider__controls-previous:focus,
 .slider .slider__controls-next:focus {
+  outline: none;
+}
+
+.btn2 {
+  margin: 10%;
+  text-align: center;
+}
+
+.btn-hover {
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
   outline: none;
 }
