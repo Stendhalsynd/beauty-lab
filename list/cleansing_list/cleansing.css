@@ -5,6 +5,10 @@
 
 @media screen and (min-width: 1000px) {
   .all {
+    background-image: url(/list/bg2.png);
+    background-size: cover;
+    background-position: center;
+
     display: flex;
     justify-content: center;
   }
@@ -14,6 +18,12 @@
   width: 50%;
   box-sizing: border-box;
   display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -33,13 +43,26 @@
   }
 }
 .video {
-  margin-top: 140px;
+  margin-top: 40px;
 }
-/* .right {
-  width: 50%;
-  float: right;
-  box-sizing: border-box;
-} */
+.sub {
+  display: flex;
+}
+.sub-video {
+  margin-right: 30px;
+}
+.sub-v {
+  margin-top: 20px;
+  width: 150px;
+  height: 100px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1000px) {
+  .sub-v {
+    display: block;
+  }
+}
 
 .bg {
   width: 100vw;
@@ -74,13 +97,19 @@
     margin-top: 100px;
   }
 }
+@media screen and (max-width: 999px) {
+  .slider {
+    right: 0;
+    margin-top: 150px;
+  }
+}
 
 .slider .slider__inner {
   display: flex;
   position: relative;
   align-items: center;
   max-width: 750px;
-  height: 400px;
+  height: 220px;
   margin: 0 auto;
 }
 .slider .slider__inner .slider__item {
@@ -190,4 +219,14 @@
 .slider .slider__controls-previous:focus,
 .slider .slider__controls-next:focus {
   outline: none;
+}
+
+.btn2 {
+  width: 200px;
+  height: 50px;
+  margin-top: 100px;
+  background-color: #7fdc65;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
 }
