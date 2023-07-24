@@ -1,11 +1,61 @@
+/* 반응형: 테블릿 */
+@media screen and (min-width: 415px) and (max-width: 1019px) {
+  .viewport-container {
+    background-color: #e1fbda;
+  }
+
+  .right-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 반응형: 데스크탑 */
+@media screen and (min-width: 1020px) {
+  .viewport-container {
+    display: flex;
+    flex-direction: row;
+    background-image: url(../images/filter-select-page-viewport-container-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  .left-container {
+    width: 50%;
+  }
+
+  .right-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* 반응형: 모바일 */
+.viewport-container {
+  width: 100%;
+  height: calc(100vh - 65.79px);
+  position: relative;
+}
+
+.right-container {
+  height: 100%;
+}
+
+.mobile-app-container {
+  width: 414px;
+  height: 100%;
+}
+
 /* filter-box 3개가 들어있는 body-container*/
 .body-container {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  background-color: #daffc7;
 
   /* scroll-snap */
   flex-direction: row;
@@ -40,7 +90,7 @@
 .filter-box-container {
   background-color: #ffffff;
   padding: 20px;
-  margin-right: 20px;
+  margin: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 40px;
   animation: slideIn 1s ease-in-out;
@@ -96,29 +146,10 @@
 
 /* 다음 페이지로 넘어가는 버튼이 들어있는 container */
 .next-page-button-container {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  right: 10%;
+  left: 10%;
+  bottom: 10px;
   display: flex;
   justify-content: center;
-}
-
-/* 반응형 */
-@media screen and (max-width: 768px) {
-  .filter-box-container {
-    width: 600px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1019px) {
-  .filter-box-container {
-    width: 700px;
-  }
-}
-
-@media screen and (min-width: 1020px) {
-  .filter-box-container {
-    width: 800px;
-  }
 }

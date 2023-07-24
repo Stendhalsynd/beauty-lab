@@ -4,7 +4,7 @@
     <!-- CSS link -->
     <link
       rel="stylesheet"
-      href="/filter/css/filter-select-page-container.css"
+      href="/filter/css/filter-select-page-container copy.css"
     />
     <link rel="stylesheet" href="/filter/css/filter-select-page-button.css" />
     <link
@@ -29,19 +29,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Beauty LAB</title>
+    <title>모든 뷰티의 시작, Beauty LAB</title>
   </head>
   <body>
-    <div class="header-container">
+    <div class="header-container" style="width: 100vw; height: 65.79px">
       <!-- header -->
       <header
-        class="d-flex justify-content-between position-fixed top-0 start-0"
+        class="d-flex justify-content-between"
         style="
-          width: 100vw;
-          height: 65.79px;
+          width: 100%;
+          height: 100%;
           background-color: white;
           transform-origin: top left;
-          z-index: 1;
         "
       >
         <a
@@ -92,72 +91,83 @@
       </header>
     </div>
 
-    <!-- 연도 선택 -->
-    <div class="body-container">
-      <!-- <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div> -->
-      <div class="filter-box-container">
-        <header class="filter-box-header">필터</header>
-        <div class="filter-select-box">
-          <br />
-          <div class="select-year-button-container">
-            <div class="year"><h4>연도</h4></div>
-            <button class="year-button" value="2021">2021</button>
-            <button class="year-button" value="2022">2022</button>
-            <button class="year-button" value="2023">2023</button>
-          </div>
+    <div class="viewport-container">
+      <!-- 왼쪽 -->
+      <div class="left-container">
+        <div class="center-area">
+          <!-- <h1>TOP of TOP 착한 화장품 찾기</h1> -->
+        </div>
+        <!-- 다음 페이지로 넘어가는 버튼-->
+        <div class="next-page-button-container">
+          <button class="next-page-button"></button>
         </div>
       </div>
-
-      <!-- 제품 카테고리 선택 -->
-      <div class="filter-box-container">
-        <header class="filter-box-header">필터</header>
-        <div class="filter-select-box">
-          <br />
-          <div class="select-category-button-container">
-            <div class="category"><h4>카테고리</h4></div>
-            <div class="scene">
-              <div class="carousel">
-                <button class="category-button">스킨케어</button>
-                <button class="category-button">클렌징/필링</button>
-                <button class="category-button">마스크/팩</button>
-                <button class="category-button">선케어</button>
-                <button class="category-button">베이스</button>
-                <button class="category-button">아이</button>
-                <button class="category-button">립</button>
-                <button class="category-button">바디</button>
-                <button class="category-button">헤어</button>
-                <button class="category-button">네일</button>
-                <button class="category-button">향수</button>
-                <button class="category-button">이너뷰티</button>
-                <button class="category-button">스킨케어</button>
+      <!-- 오른쪽 -->
+      <div class="right-container">
+        <div class="mobile-app-container">
+          <div class="body-container">
+            <!-- <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div> -->
+            <!-- 연도 선택 -->
+            <div class="filter-box-container">
+              <header class="filter-box-header">필터</header>
+              <div class="filter-select-box">
+                <br />
+                <div class="select-year-button-container">
+                  <div class="year"><h4>연도</h4></div>
+                  <button class="year-button" value="2021">2021</button>
+                  <button class="year-button" value="2022">2022</button>
+                  <button class="year-button" value="2023">2023</button>
+                </div>
               </div>
             </div>
-            <div class="control-button-container">
-              <button class="previous-button">Previous</button>
-              <button class="next-button">Next</button>
+
+            <!-- 제품 카테고리 선택 -->
+            <div class="filter-box-container">
+              <header class="filter-box-header">필터</header>
+              <div class="filter-select-box">
+                <br />
+                <div class="select-category-button-container">
+                  <div class="category"><h4>카테고리</h4></div>
+                  <div class="scene">
+                    <div class="carousel">
+                      <button class="category-button">스킨케어</button>
+                      <button class="category-button">클렌징/필링</button>
+                      <button class="category-button">마스크/팩</button>
+                      <button class="category-button">선케어</button>
+                      <button class="category-button">베이스</button>
+                      <button class="category-button">아이</button>
+                      <button class="category-button">립</button>
+                      <button class="category-button">바디</button>
+                      <button class="category-button">헤어</button>
+                      <button class="category-button">네일</button>
+                      <button class="category-button">향수</button>
+                      <button class="category-button">이너뷰티</button>
+                      <button class="category-button">스킨케어</button>
+                    </div>
+                  </div>
+                  <div class="control-button-container">
+                    <button class="previous-button">Previous</button>
+                    <button class="next-button">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 서브 카테고리 선택 -->
+            <div class="filter-box-container" id="">
+              <header class="filter-box-header">필터</header>
+              <div class="filter-select-box">
+                <br />
+                <div class="select-subcategory-button-container"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- 서브 카테고리 선택 -->
-      <div class="filter-box-container" id="">
-        <header class="filter-box-header">필터</header>
-        <div class="filter-select-box">
-          <br />
-          <div class="select-subcategory-button-container"></div>
-        </div>
-      </div>
     </div>
-
-    <!-- 다음 페이지로 넘어가는 버튼-->
-    <div class="next-page-button-container">
-      <button class="next-page-button"></button>
-    </div>
-
-    <script src="/filter/js/button-activity.js"></script>
-    <script src="/filter/js/3d-carousel-slider.js"></script>
+    <script src="/filter/script/button-activity.js"></script>
+    <script src="/filter/script/3d-carousel-slider.js"></script>
   </body>
 </html>
