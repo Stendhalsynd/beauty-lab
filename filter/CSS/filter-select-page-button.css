@@ -49,6 +49,11 @@
     7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
 }
 
+.year-button,
+.subcategory-button {
+  position: relative;
+}
+
 /* 제품 카테고리 선택 버튼 */
 .category-button {
   position: absolute;
