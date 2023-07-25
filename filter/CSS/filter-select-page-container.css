@@ -62,6 +62,7 @@
   .center-area {
     position: absolute;
     top: 300px;
+    animation: fadeIn ease 0.6s;
   }
 
   .right-container {
@@ -74,6 +75,26 @@
   .next-page-button-container {
     position: absolute;
     top: 400px;
+    animation: fadeIn ease 0.6s;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* filter-box-container 애니메이션 효과를 정의하는 @keyframes 규칙 */
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 
@@ -117,18 +138,9 @@
   border-radius: 4px;
 }
 
-/* filter-box-container 애니메이션 효과를 정의하는 @keyframes 규칙 */
-@keyframes slideIn {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
 /* 필터 box 한칸이 들어있는 container */
 .filter-box-container {
+  position: relative;
   background-color: #ffffff;
   padding: 20px;
   margin: 50px;
@@ -139,7 +151,13 @@
   /* scroll-snap */
   scroll-snap-align: center;
   min-width: 80%;
-  min-height: 600px;
+  min-height: 700px;
+}
+
+.filter-box-container img {
+  position: absolute;
+  transform: translate(-5px, 69px);
+  scale: 2.3;
 }
 
 /* 제품 카테고리 버튼이 들어있는 container */

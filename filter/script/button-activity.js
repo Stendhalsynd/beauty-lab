@@ -165,7 +165,7 @@ function handleNextPageButtonClick() {
       selectedCategory === "스킨케어" &&
       selectedSubcategory === "앰플/세럼"
     ) {
-      url = "../list/serum list/serum.html";
+      url = "../list/serum_list/serum.html";
     } else if (
       selectedYear === "2023" &&
       selectedCategory === "클렌징/필링" &&
