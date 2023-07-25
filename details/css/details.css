@@ -32,16 +32,30 @@ body {
 
 .body-container {
   display: flex;
-  /* justify-content: center;
-          align-items: center; */
   margin: 0;
+}
 
-  /* background-color: white; */
-  /* #f2f2f2; */
+#productReviews {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2vw;
+  align-items: center;
+  flex-direction: column;
+}
+
+#productReviews .btn-hover {
+  width: 40vw;
+  height: 5vh;
+  font-size: 15px;
+}
+.buttons {
+  padding-top: 5%;
+  padding-bottom: 3%;
 }
 
 .stamp {
-  position: fixed;
+  position: absolute;
   width: 13vw;
   top: 11vh;
   left: 40%;
@@ -154,10 +168,6 @@ a {
   --bs-border-radius: 0.6rem;
 }
 
-.buttons {
-  padding-top: 3%;
-  padding-bottom: 2%;
-}
 .btn-hover {
   width: 80px;
   font-size: 8px;
@@ -367,13 +377,24 @@ caption {
   .goods-name a {
     font-size: 18px;
   }
+  .stamp {
+    top: 7vh;
+    left: 65%;
+    width: 28%;
+  }
+  #productDescription img {
+    width: 70vw;
+  }
+  #productReviews .btn-hover {
+    font-size: 11px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1019px) {
   .body-container {
     height: 95vh;
   }
-  .image {
+  .images {
     width: 55%;
   }
   .text-container {
@@ -385,43 +406,10 @@ caption {
   .body-container {
     height: 95vh;
   }
-  .image {
+  .images {
     width: 55%;
   }
   .text-container {
     width: 45%;
   }
-  /* .allIngredient {
-      font-size: 15px;
-    }
-    strong {
-      font-size: 16px;
-    }
-    .goods-name {
-      font-size: 28px;
-    }
-    body,
-    #explanation {
-      font-size: 15px;
-    } */
 }
-
-/* .nav img {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    align-content: center;
-  
-    display: block;
-  }
-  
-  .nav {
-    --bs-nav-link-color: rgb(119, 119, 119);
-    background-color: white;
-  }
-  
-  .nav-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
