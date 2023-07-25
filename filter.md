@@ -32,8 +32,6 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 # 📘 filter-select-page: 화장품 카테고리 선택 페이지
 
-![](https://b-lab.netlify.app/filter/filter-select-page.html)
-
 ## 📗 목표
 
 - 반응형
@@ -45,4 +43,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 # 📘filter-select-page: 화장품 카테고리 선택 페이지
 
-- 반응형
+- 반응형: 모바일
+
+```
+<!--  -->
+@media screen and (max-width: 414px) {
+}
+```
+
+@media(미디어쿼리)를 통해 iphone-xr의 width(414px)인 경우의 화면 구성
+
+---
+
+# 📘 filter-select-page: 화장품 카테고리 선택 페이지
