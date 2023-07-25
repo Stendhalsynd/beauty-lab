@@ -6,10 +6,7 @@
     <title>모든 뷰티의 시작, 화해</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"
-    />
+   
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap"
       rel="stylesheet"
@@ -137,8 +134,8 @@
 
           <div id="explanation">
             <div class="price">
-              <span class="old-price">18,000</span
-              ><span class="old-price-won">원</span> 12,600<span>원</span>
+              <span class="old-price"><span class="old-price-num">18,000</span
+              ><span class="old-price-won">원</span></span> <span class="new-price">12,600<span>원</span></span>
             </div>
             <div class="buttons">
               <button class="btn-hover color-1">사용감TOP</button>
@@ -272,6 +269,10 @@
     const productInfoLink = productInfoLi.querySelector("a");
     const buyInfoLink = buyInfoLi.querySelector("a");
 
+if (screenWidth <= 768) {
+  container.appendChild(content2);
+}
+
     function goods_buyinfo(event) {
       event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
       document.getElementById("productReviews").style.display = "flex";
@@ -308,12 +309,6 @@
     }
 
     $(document).ready(function() {
-      $(".buy").click(function() {
-    // 이동하고자 하는 URL을 아래에 입력하세요.
-    window.location.href = "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158293";
-  });
-});
-$(document).ready(function() {
     $(window).scroll( function(){
         $('.fadeinleft').each( function(i){
             var bottom_of_element = $(this).offset().top;
@@ -324,6 +319,17 @@ $(document).ready(function() {
             }
         }); 
     });
-});   
+});  
+
+    $(document).ready(function() {
+      $(".buy").click(function() {
+    // 이동하고자 하는 URL을 아래에 입력하세요.
+    window.location.href = "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158293";
+  });
+});
+
+ 
+
+
   </script>
 </html>

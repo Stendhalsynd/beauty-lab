@@ -34,17 +34,16 @@ body {
   display: flex;
   /* justify-content: center;
           align-items: center; */
-  height: 95vh;
   margin: 0;
-  position: relative;
+
   /* background-color: white; */
   /* #f2f2f2; */
 }
 
 .stamp {
-  position: absolute;
-  width: 13%;
-  top: -1%;
+  position: fixed;
+  width: 13vw;
+  top: 11vh;
   left: 40%;
   animation-name: stampani;
   animation-duration: 1s;
@@ -69,12 +68,10 @@ body {
 .text-container {
   justify-content: center;
   padding: 2%;
-  width: 45%;
   height: 95vh;
 }
 
 .images {
-  width: 55%;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -231,7 +228,7 @@ a {
   font-size: 21px;
 }
 
-.old-price {
+.old-price-num {
   text-decoration: line-through;
   font-size: 16px !important;
   color: gray;
@@ -360,38 +357,40 @@ caption {
   border-radius: 10px 10px 0 0;
 }
 
-@media screen and (max-width: 500px) {
-  .goods-name a {
-    font-size: 15px;
+@media screen and (max-width: 768px) {
+  .body-container {
+    flex-direction: column;
   }
-  .stamp {
-    width: 22%;
-    top: 3%;
-    left: 36%;
+  .image {
+    width: 100%;
   }
-  #productDescription img {
-    width: 80vw;
-  }
-}
-
-@media screen and (min-width: 501px) {
   .goods-name a {
     font-size: 18px;
   }
-  .stamp {
-    width: 22%;
-    top: 2%;
-    left: 36%;
-  }
-  #productDescription img {
-    width: 80vw;
-  }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1019px) {
+  .body-container {
+    height: 95vh;
+  }
+  .image {
+    width: 55%;
+  }
+  .text-container {
+    width: 45%;
+  }
 }
 
 @media screen and (min-width: 1020px) {
+  .body-container {
+    height: 95vh;
+  }
+  .image {
+    width: 55%;
+  }
+  .text-container {
+    width: 45%;
+  }
   /* .allIngredient {
       font-size: 15px;
     }
