@@ -4,7 +4,7 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('./images/ppt-background.png')
+backgroundImage: url('./images/ppt-md-background.png')
 ---
 
 <style>
