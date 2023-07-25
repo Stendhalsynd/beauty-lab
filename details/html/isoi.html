@@ -137,8 +137,8 @@
 
           <div id="explanation">
             <div class="price">
-              <span class="old-price">49,000</span
-              ><span class="old-price-won">원</span> 34,300<span>원</span>
+              <span class="old-price"><span class="old-price-num">49,000</span
+              ><span class="old-price-won">원</span></span> <span class="new-price">34,300<span>원</span></span>
             </div>
             <div class="buttons">
               <button class="btn-hover color-1">톤개선TOP</button>
@@ -156,7 +156,7 @@
             <div class="allIngredient">
                 정제수, <span>다마스크장미꽃수,</span> 글리세린, 에탄올,알부틴, 
                 베타인, 트레할로오스, 다마스크장미꽃오일, 비타민나무열매추출물, 아사이팜열매추출물, 로우스위트블루베리추출물, 인디안구스베리열매추출물, 크랜베리추출물, 바위돌꽃뿌리추출물, 고삼뿌리추출물, 블랙윌로우나무껍질추출물, 약모밀추출물, 잔탄검, 알란토인, 판테놀, 붉나무충영추출물, 올리브나무잎추출물, 감국꽃추출물, 회화나무싹추출물, 꿀풀잎추출물, 밤껍질추출물, 흰버드나무껍질추출물, 병풀추출물, 부틸렌글라이콜, 1,2-헥산다이올, 포트마리골드꽃추출물, 황금추출물, 모란뿌리추출물, 스페인감초뿌리추출물 
-                *아이소이에서 사용하는 에탄올은 식물발효성분입니다
+                <br><br>*아이소이에서 사용하는 에탄올은 식물발효성분입니다
             </div>
           </div>
         </div>
@@ -256,8 +256,6 @@
           </tbody>
         </table>
 
-        <div class="fadeinleft"><div class="youtube">디렉터파이 유튜브 바로 가기</div></div>
-
         <div
           class="d-img"
           style="display: flex; flex-direction: column; padding-top: 5vh"
@@ -268,18 +266,11 @@
       </div>
 
       <div id="productReviews" style="display: none">
-        <div class="pd-container">
-          <a
-            href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158293"
-            >아이소이 블레미쉬 케어 업 세럼 구매하기</a
-          >
-          <div class="buttons">
-            <button class="btn-hover color-1 buy">아이소이 블레미쉬 케어 업 세럼 구매하기</button>
-            </div>
-          
+        <div class="buttons">
+          <button class="btn-hover color-1 buy">아이소이 블레미쉬 케어 업 세럼 구매하기</button>
         </div>
-      </div>
     </div>
+  </div>
   </body>
   <script>
     AOS.init();
@@ -290,30 +281,26 @@
     const buyInfoLink = buyInfoLi.querySelector("a");
 
     function goods_buyinfo(event) {
-      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      event.preventDefault(); 
       document.getElementById("productReviews").style.display = "flex";
       document.getElementById("productDescription").style.display = "none";
 
-      // buyInfoLink에 on 클래스 추가
+
       buyInfoLi.classList.add("on");
 
-      // productInfoLink에서 on 클래스 제거
+
       productInfoLi.classList.remove("on");
     }
 
     function goods_detailinfo(event) {
-      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      event.preventDefault();
       document.getElementById("productDescription").style.display = "flex";
       document.getElementById("productReviews").style.display = "none";
 
-      // productInfoLink에 on 클래스 추가
       productInfoLi.classList.add("on");
-
-      // buyInfoLink에서 on 클래스 제거
       buyInfoLi.classList.remove("on");
     }
 
-    // buyInfo와 productInfo 버튼에 클릭 이벤트 리스너를 등록합니다.
     document.getElementById("buyInfo").addEventListener("click", goods_buyinfo);
     document
       .getElementById("productInfo")
@@ -326,8 +313,7 @@
 
     $(document).ready(function() {
       $(".buy").click(function() {
-    // 이동하고자 하는 URL을 아래에 입력하세요.
-    window.location.href = "https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000158293";
+    window.location.href = "https://search.shopping.naver.com/catalog/28317290555?cat_id=50000439&frm=NVSCPRO&query=%EC%95%84%EC%9D%B4%EC%86%8C%EC%9D%B4+%EB%B8%94%EB%A0%88%EB%AF%B8%EC%89%AC&NaPm=ct%3Dlkhqedy0%7Cci%3D9865a72a9711db65a67df0d26e591f2da429b3ce%7Ctr%3Dsls%7Csn%3D95694%7Chk%3Db79749f6d2c8744d6fbcb263ea7f2a6ecceba16e";
   });
 });
 $(document).ready(function() {

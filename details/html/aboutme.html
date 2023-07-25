@@ -135,12 +135,10 @@
             >
           </div>
 
-          
-
           <div id="explanation">
             <div class="price">
-              <span class="old-price">19,600</span
-              ><span class="old-price-won">원</span> 28,000<span>원</span>
+              <span class="old-price"><span class="old-price-num">19,600</span
+              ><span class="old-price-won">원</span></span> <span class="new-price">28,000<span>원</span></span>
             </div>
             <div class="buttons">
               <button class="btn-hover color-1">모공개선TOP</button>
@@ -256,27 +254,17 @@
           </tbody>
         </table>
 
-        <div class="fadeinleft"><div class="youtube">디렉터파이 유튜브 바로 가기</div></div>
-
         <div
           class="d-img"
           style="display: flex; flex-direction: column; padding-top: 5vh"
         >
           <img src="../../images/details/aboutme/4.jpg" />
-         
         </div>
       </div>
 
       <div id="productReviews" style="display: none">
-        <div class="pd-container">
-          <a
-            href="https://search.shopping.naver.com/catalog/27570049527?cat_id=50000439&frm=NVSCPRO&query=%EC%88%B2+%EC%A7%84%EC%A0%95+%EC%88%98%EB%B6%84+%EC%84%B8%EB%9F%BC&NaPm=ct%3Dlkai0o8o%7Cci%3D57d36d4bbb547608db49e97f72c0d5fde8ef5eea%7Ctr%3Dsls%7Csn%3D95694%7Chk%3De1819b2e2c2c65db3ef4eb93c774167de62b7f5d"
-            >어바웃미 숲 진정 수분 세럼 50ml 구매하기</a
-          >
-          <div class="buttons">
-            <button class="btn-hover color-1 buy">어바웃미 숲 진정 수분 세럼 50ml 구매하기</button>
-            </div>
-          
+        <div class="buttons">
+          <button class="btn-hover color-1 buy">어바웃미 숲 진정 수분 세럼 50ml 구매하기</button>
         </div>
       </div>
     </div>
@@ -290,30 +278,26 @@
     const buyInfoLink = buyInfoLi.querySelector("a");
 
     function goods_buyinfo(event) {
-      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      event.preventDefault(); 
       document.getElementById("productReviews").style.display = "flex";
       document.getElementById("productDescription").style.display = "none";
 
-      // buyInfoLink에 on 클래스 추가
       buyInfoLi.classList.add("on");
 
-      // productInfoLink에서 on 클래스 제거
       productInfoLi.classList.remove("on");
     }
 
     function goods_detailinfo(event) {
-      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      event.preventDefault(); 
       document.getElementById("productDescription").style.display = "flex";
       document.getElementById("productReviews").style.display = "none";
 
-      // productInfoLink에 on 클래스 추가
+
       productInfoLi.classList.add("on");
 
-      // buyInfoLink에서 on 클래스 제거
       buyInfoLi.classList.remove("on");
     }
 
-    // buyInfo와 productInfo 버튼에 클릭 이벤트 리스너를 등록합니다.
     document.getElementById("buyInfo").addEventListener("click", goods_buyinfo);
     document
       .getElementById("productInfo")
@@ -326,7 +310,6 @@
 
     $(document).ready(function() {
       $(".buy").click(function() {
-    // 이동하고자 하는 URL을 아래에 입력하세요.
     window.location.href = "https://search.shopping.naver.com/catalog/27570049527?cat_id=50000439&frm=NVSCPRO&query=%EC%88%B2+%EC%A7%84%EC%A0%95+%EC%88%98%EB%B6%84+%EC%84%B8%EB%9F%BC&NaPm=ct%3Dlkai0o8o%7Cci%3D57d36d4bbb547608db49e97f72c0d5fde8ef5eea%7Ctr%3Dsls%7Csn%3D95694%7Chk%3De1819b2e2c2c65db3ef4eb93c774167de62b7f5d";
   });
 });
