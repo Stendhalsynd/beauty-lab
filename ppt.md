@@ -4,19 +4,29 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('./images/ppt-background.png')
+backgroundImage: url('./images/ppt-md-background.png')
 ---
 
 <style>
   /* Add your custom CSS here */
-  /* For example, to reduce the font size of the content, you can use: */
+  /* For example, to adjust the section size and margins, you can use: */
   section {
-    font-size: 30px; /* Adjust the percentage as needed */
+    width: 100%; /* Set the section width to 100% of the slide area */
+    height: 100%; /* Set the section height to 100% of the slide area */
+    /* margin: 0; Remove any margin around the section */
+    /* padding: 0; Remove any padding within the section */
+    background-size: cover; /* Make sure the background image covers the entire section */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+  }
+  
+  /* You can also adjust the font size and other styles if needed */
+  section h1, section h2, section h3 {
+    font-size: 30px; /* Adjust the font size for headings */
+    margin-top: 120px;
   }
 
-  .image-class {
-    max-width: 80%; /* Adjust the percentage as needed */
-    height: auto;
+  section p {
+    font-size: 24px; /* Adjust the font size for paragraphs */
   }
 </style>
 
@@ -46,7 +56,7 @@ backgroundImage: url('./images/ppt-background.png')
 
 ---
 
-![](https://velog.velcdn.com/images/qmflf556/post/678729ea-c94c-4910-ba50-d54a939594b4/image.gif)(.image-class)
+![](https://velog.velcdn.com/images/qmflf556/post/678729ea-c94c-4910-ba50-d54a939594b4/image.gif)
 
 그러기엔 scroll snap 은 적합하지 않은 선택이다.
 
@@ -856,3 +866,11 @@ https://github.com/Stendhalsynd/beauty-lab
 [jQuery DOCS - animate](https://api.jquery.com/animate/#animate-properties-duration-easing-complete)
 [MDN - at-rules](https://developer.mozilla.org/ko/docs/Web/CSS/At-rule)
 [MDN - iframe](https://developer.mozilla.org/ko/docs/Web/HTML/Element/iframe)
+
+---
+
+```js
+console.log;
+```
+
+---
