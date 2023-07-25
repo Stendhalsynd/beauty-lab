@@ -4,14 +4,16 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('https://marp.app/assets/hero-background.svg')
+backgroundImage: url('./images/ppt-md-background.png')
 ---
+
+<!-- ![height:700 width:100%](./images/ppt-thumbnail.png) -->
+
+![bg](./images/ppt-thumbnail.png)
 
 ---
 
-![height:600px width:700](./images/ppt-md-background.png)
-
----
+<br>
 
 # 📚 화장품 추천 사이트 - Beauty Lab
 
@@ -21,6 +23,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 - 개발 완료 일자 : 2023년 7월 23일 (일)
 
 ---
+
+<br>
 
 # 📘 목표
 
