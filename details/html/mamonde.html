@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모든 뷰티의 시작, 화해</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/font.css" />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/details.css" />
+    <!--chart.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css"
+    />
+  </head>
+  <body>
+    <!-- header -->
+    <header
+      class="d-flex justify-content-between top-0 start-0"
+      style="
+        width: 100vw;
+        height: 65.79px;
+        transform-origin: top left;
+        z-index: 1;
+      "
+    >
+      <a
+        href="/"
+        class="px-4 position-absolute top-0 start-0 logo"
+        style="padding-top: 20px; padding-bottom: 20px"
+      >
+        <img
+          src="../../images/Beauty Lab.png"
+          alt="logo"
+          width="48px"
+          height="24px"
+          class="hd-logo"
+        />
+      </a>
+
+      <button
+        class="border border-0 bg-transparent px-3 position-absolute top-0 end-0 menu__button"
+        style="padding: 20px 16px"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill="#5EDFDF"
+            fill-rule="evenodd"
+            class="hd-menu"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+          />
+        </svg>
+      </button>
+
+      <nav class="menu">
+        <ul class="list">
+          <li class="item">제품소개</li>
+          <li class="item">회사소개</li>
+          <li class="item">채용</li>
+          <li class="item">뉴스</li>
+          <li class="item">공지</li>
+          <li class="item">블로그</li>
+          <li class="item">광고문의</li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="top-container">
+      <div class="body-container">
+        <img class="stamp" src="../../images/details/soap.png"></img>
+        <div class="images">
+            <img
+            class="mainImage"
+            src="../../images/details/mamonde/1.jpg"
+            id="big"
+          />
+          <div class="sideImage">
+            <img
+              src="../../images/details/mamonde/1.jpg"
+              onmouseover="showBig('1.jpg');"
+            />
+            <img
+              src="../../images/details/mamonde/2.jpg"
+              onmouseover="showBig('2.jpg');"
+            />
+            <img
+              src="../../images/details/mamonde/3.jpg"
+              onmouseover="showBig('3.jpg');"
+            />
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="company" style="padding-bottom: 10px">mamonde</div>
+
+          <div class="goods-name">
+            <a href="https://www.youtube.com/watch?v=T0OXZBdgr9I">
+              [2023촉촉&저자극TOP]리피드 밸런스 아미노 폼 120g</a
+            >
+          </div>
+
+          
+
+          <div id="explanation">
+            <div class="price">
+              <span class="old-price">16,000</span
+              ><span class="old-price-won">원</span> 12,800<span>원</span>
+            </div>
+            <div class="buttons">
+              <button class="btn-hover color-1" style="width:100px">유수분밸런스TOP</button>
+            </div>
+            <div style="padding-top:12px;padding-bottom:12px;"><strong>선정기준</strong></div>
+            # 세안 후 유수분 밸런스가 좋은 클렌징 폼<br />
+            # 부드러운 거품, 편안하게 세안 가능 <br />
+            # 미끄덩거림 없고 보송한 마무리감
+            <br />
+
+            <hr />
+            <div style="padding-top:12px;padding-bottom:12px;"><strong>전성분</strong></div>
+ 
+            <div class="allIngredient">
+                정제수, 글리세린, <span>포타슘코코일글리시네이트, 소듐라우로일글루타메이트,</span> 글리세릴스테아레이트, 
+                시트릭애씨드, <span>라우릴하이드록시설테인,</span> 글라이콜다이스테아레이트, <span>소듐코코일글라이시네이트, 코코-글루코사이드,</span>
+                폴리글리세릴-10라우레이트, 하이드록시프로필스타치포스페이트, 폴리쿼터늄-10, 글리세릴카프릴레이트, 테트라소듐이디티에이,
+                에틸헥실글리세린, 알지닌(100ppm), 아스파틱애씨드(100ppm), 글루타믹애씨드(100ppm), 피토스테롤, 세라마이드엔피(100ppm), 토코페롤
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="prd_detail_tab" id="tabList">
+        <li id="productInfo" class="on">
+          <a href="#" onclick="goods_detailinfo(event)">상품설명</a>
+        </li>
+        <li id="buyInfo" class="">
+          <a href="#" onclick="goods_buyinfo(event)">구매정보</a>
+        </li>
+      </ul>
+
+      <div id="productDescription">
+        <div
+          style="
+            width: 80vw;
+            padding-top: 4vh;
+            justify-content: center;
+            text-align: left;
+          "
+        >
+          <strong>실사용자 후기</strong>
+        </div>
+        <hr style="width: 80vw" />
+
+        <table
+          data-aos="fade-up"
+          data-aos-easing="ease-in-out"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-bottom"
+          id="stacked-example-4"
+          class="charts-css column show-heading show-labels data-spacing-10 multiple stacked"
+        >
+          <caption>
+            수부지, 복합성 피부
+          </caption>
+
+          <tbody>
+            <tr>
+              <th scope="row">세정력</th>
+              <td class="included" style="--size: calc(100 / 100)">
+                <span>상</span>
+        
+                <tr>
+                  <th scope="row">수분감</th>
+                  <td
+                            class="excluded-1"
+                            style="--size: calc(50 / 100)"
+                          ></td>
+                          <td class="excluded-2" style="--size: calc(50 / 100)">
+                            <span>중</span>
+
+
+                    <tr>
+                      <th scope="row" style="font-size: 14px">사용감</th>
+                      <td class="included" style="--size: calc(100 / 100)">
+                        <span>상</span>
+
+                        <tr>
+                          <th scope="row">저자극</th>
+
+                          <td
+                            class="excluded-1"
+                            style="--size: calc(75 / 100)"
+                          ></td>
+                          <td class="excluded-2" style="--size: calc(25 / 100)">
+                            <span>중상</span>
+
+                            
+                            </tr>
+                          </td>
+                        </tr>
+                      </td>
+                    </tr>
+                  </td>
+                </tr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="fadeinleft"><div class="youtube">디렉터파이 유튜브 바로 가기</div></div>
+
+        <div
+          class="d-img"
+          style="display: flex; flex-direction: column; padding-top: 5vh"
+        >
+          <img src="../../images/details/mamonde/4.jpg" />
+          
+        </div>
+      </div>
+
+      <div id="productReviews" style="display: none">
+        <div class="pd-container">
+          <a
+            href="https://www.mamonde.com/kr/ko/product/lipid-balance-amino-foam.html"
+            >마몽드 리피드 밸런스 아미노 폼 120g 구매하기</a
+          >
+          <div class="buttons">
+            <button class="btn-hover color-1 buy">마몽드 리피드 밸런스 아미노 폼 120g 구매하기</button>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    AOS.init();
+
+    const productInfoLi = document.getElementById("productInfo");
+    const buyInfoLi = document.getElementById("buyInfo");
+    const productInfoLink = productInfoLi.querySelector("a");
+    const buyInfoLink = buyInfoLi.querySelector("a");
+
+    function goods_buyinfo(event) {
+      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      document.getElementById("productReviews").style.display = "flex";
+      document.getElementById("productDescription").style.display = "none";
+
+      // buyInfoLink에 on 클래스 추가
+      buyInfoLi.classList.add("on");
+
+      // productInfoLink에서 on 클래스 제거
+      productInfoLi.classList.remove("on");
+    }
+
+    function goods_detailinfo(event) {
+      event.preventDefault(); // 기본 클릭 동작(링크 이동)을 막습니다.
+      document.getElementById("productDescription").style.display = "flex";
+      document.getElementById("productReviews").style.display = "none";
+
+      // productInfoLink에 on 클래스 추가
+      productInfoLi.classList.add("on");
+
+      // buyInfoLink에서 on 클래스 제거
+      buyInfoLi.classList.remove("on");
+    }
+
+    // buyInfo와 productInfo 버튼에 클릭 이벤트 리스너를 등록합니다.
+    document.getElementById("buyInfo").addEventListener("click", goods_buyinfo);
+    document
+      .getElementById("productInfo")
+      .addEventListener("click", goods_detailinfo);
+
+    function showBig(val) {
+      var obj = document.getElementById("big");
+      obj.src = "../../images/details/mamonde/" + val;
+    }
+
+    $(document).ready(function() {
+      $(".buy").click(function() {
+    // 이동하고자 하는 URL을 아래에 입력하세요.
+    window.location.href = "https://www.mamonde.com/kr/ko/product/lipid-balance-amino-foam.html";
+  });
+});
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.fadeinleft').each( function(i){
+            var bottom_of_element = $(this).offset().top;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).css({'opacity':'1','margin-left':'0px'});
+            }
+        }); 
+    });
+});   
+  </script>
+</html>
