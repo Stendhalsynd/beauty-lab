@@ -1,4 +1,4 @@
-// 선택된 연도, 카테고리, 서브 카테고리를 저장할 변수를 선언합니다.
+// 선택된 연도, 카테고리, 서브 카테고리를 저장할 변수를 선언
 var selectedYear = null;
 var selectedCategory = null;
 var selectedSubcategory = null;
@@ -28,7 +28,7 @@ function changeButtonColor(event) {
     var categoryButtons = document.querySelectorAll(".category-button");
 
     selectedCategory = event.target.textContent;
-    selectedSubcategory = null; // 새로운 카테고리를 선택하면 서브 카테고리 정보를 초기화합니다.
+    selectedSubcategory = null; // 새로운 카테고리를 선택하면 서브 카테고리 정보를 초기화
 
     // 모든 카테고리 버튼의 색상과 배경을 초기화
     categoryButtons.forEach(function (button) {
@@ -107,7 +107,7 @@ function changeButtonColor(event) {
     event.target.style.border = "solid 2px #7edc65";
   }
 
-  // next-page-button의 내용을 갱신합니다.
+  // next-page-button의 내용을 갱신
   setNextPageButtonContent();
 }
 
@@ -127,7 +127,7 @@ categoryButtons.forEach(function (button) {
 function setNextPageButtonContent(content) {
   var nextPageButton = document.querySelector(".next-page-button");
 
-  // 선택한 연도, 카테고리, 서브 카테고리를 모두 함께 보여줍니다.
+  // 선택한 연도, 카테고리, 서브 카테고리를 모두 함께 보여준다.
   var content = "선택된 정보: ";
   if (selectedYear) {
     content += "연도(" + selectedYear + ") ";
@@ -139,7 +139,7 @@ function setNextPageButtonContent(content) {
     content += "세부 카테고리(" + selectedSubcategory + ")";
   }
 
-  // 선택된 내용을 next-page-button의 내용으로 설정합니다.
+  // 선택된 내용을 next-page-button의 내용으로 설정
   if (content.trim() === "선택된 정보:") {
     content = "선택된 정보가 없습니다.";
   }

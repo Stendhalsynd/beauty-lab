@@ -63,43 +63,43 @@
 
 /* 각 제품 카테고리 선택 버튼의 위치 조절 */
 .category-button:nth-child(1) {
-  transform: rotateY(0deg) translateZ(385px);
+  transform: rotateY(0deg) translateZ(422px);
 }
 .category-button:nth-child(2) {
-  transform: rotateY(30deg) translateZ(385px);
+  transform: rotateY(27.6923deg) translateZ(422px);
 }
 .category-button:nth-child(3) {
-  transform: rotateY(60deg) translateZ(385px);
+  transform: rotateY(55.3846deg) translateZ(422px);
 }
 .category-button:nth-child(4) {
-  transform: rotateY(90deg) translateZ(385px);
+  transform: rotateY(83.0769deg) translateZ(422px);
 }
 .category-button:nth-child(5) {
-  transform: rotateY(120deg) translateZ(385px);
+  transform: rotateY(110.769deg) translateZ(422px);
 }
 .category-button:nth-child(6) {
-  transform: rotateY(150deg) translateZ(385px);
+  transform: rotateY(138.462deg) translateZ(422px);
 }
 .category-button:nth-child(7) {
-  transform: rotateY(180deg) translateZ(385px);
+  transform: rotateY(166.154deg) translateZ(422px);
 }
 .category-button:nth-child(8) {
-  transform: rotateY(210deg) translateZ(385px);
+  transform: rotateY(193.846deg) translateZ(422px);
 }
 .category-button:nth-child(9) {
-  transform: rotateY(240deg) translateZ(385px);
+  transform: rotateY(221.538deg) translateZ(422px);
 }
 .category-button:nth-child(10) {
-  transform: rotateY(270deg) translateZ(385px);
+  transform: rotateY(249.231deg) translateZ(422px);
 }
 .category-button:nth-child(11) {
-  transform: rotateY(300deg) translateZ(385px);
+  transform: rotateY(276.923deg) translateZ(422px);
 }
 .category-button:nth-child(12) {
-  transform: rotateY(330deg) translateZ(385px);
+  transform: rotateY(304.615deg) translateZ(422px);
 }
 .category-button:nth-child(13) {
-  transform: rotateY(360deg) translateZ(385px);
+  transform: rotateY(332.308deg) translateZ(422px);
 }
 
 .control-button-container button {
