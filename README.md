@@ -31,6 +31,10 @@
 - Sass 활용
 - BEM (Block, Element, Modifier) (가독성 좋은 스타일 기법)
 
+# 📘 결과
+
+<img width="393" alt="스크린샷 2023-12-16 오전 10 04 28" src="https://github.com/Stendhalsynd/beauty-lab/assets/96957774/2cd26a68-20a5-4d21-a979-7a55c4a030ef">
+
 # 📓 블로깅
 
 세부적인 사항들은 블로그에 정리해두었습니다 😃
